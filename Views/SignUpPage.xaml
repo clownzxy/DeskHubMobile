@@ -28,16 +28,22 @@
                     <Entry Placeholder="Last Name" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <Entry Placeholder="Email" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <Entry Placeholder="Phone" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+       
                     <Label Text="Gender" FontAttributes="Bold" TextColor="#49A686"  FontSize="18" BackgroundColor="Transparent" Margin="13,10,0,10"/>
-                    <HorizontalStackLayout>
-                        <RadioButton>
-                            <RadioButton.Content>
-                                <Image Source="maleicon.png"/>
-                            </RadioButton.Content>
-                        </RadioButton>
-                    </HorizontalStackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                    
+                    <RadioButton/>
+                    <Image Source="maleicon.png" Scale="1.2" Margin="-10,0,50,0"/>
+                    <RadioButton/>
+                    <Image Source="femaleicon.png" Scale="1.2" Margin="-10,0,0,0"/>
+
+
+
+                    </StackLayout>
                     <Entry Placeholder="Address" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Entry Placeholder="Birthday" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Label Text="Birthday" FontAttributes="Bold" TextColor="#25936B"  FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <DatePicker MinimumDate="02/01/1955" MaximumDate="12/31/2024" Date="01/01/2000" Margin="9,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
+                    
                     <Entry Placeholder="Username" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <Entry Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <!-- Add more content as needed -->
