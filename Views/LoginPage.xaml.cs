@@ -1,8 +1,8 @@
 namespace DeskHubMobile.Views;
 
-public partial class testone : ContentPage
+public partial class LoginPage : ContentPage
 {
-	public testone()
+	public LoginPage()
 	{
 		InitializeComponent();
 	}
