@@ -18,7 +18,7 @@
                AbsoluteLayout.LayoutBounds="0.5,0.6,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
 
         <!-- Frame Positioned at Lower Middle -->
-        <Frame BorderColor="Transparent" BackgroundColor="White" HeightRequest="600" WidthRequest="300" CornerRadius="25"
+        <Frame BorderColor="Transparent" BackgroundColor="White" HeightRequest="500" WidthRequest="300" CornerRadius="25"
                AbsoluteLayout.LayoutBounds="0.5,0.8,0.9,0.2" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
             <ScrollView>
                 <StackLayout>
@@ -39,10 +39,17 @@
                     <Label Text="Birthday" FontAttributes="Bold" TextColor="#25936B"  FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <DatePicker MinimumDate="02/01/1955" MaximumDate="12/31/2024" Date="01/01/2000" Margin="9,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="18" />
                     <Entry Placeholder="Username" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    
                     <Entry Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+
                     <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Button BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" Margin="0,0,0,150"/>
+                        <Button BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" />
                     </Frame>
+
+                    <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,0,0,100">
+                       
+                    </Frame>
+
                     <!-- Add more content as needed -->
                 </StackLayout>
             </ScrollView>

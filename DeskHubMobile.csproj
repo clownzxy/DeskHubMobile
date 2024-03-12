@@ -59,6 +59,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\backgroundcolor.png" />
 	  <None Remove="Resources\Images\backgroundimage.png" />
+	  <None Remove="Resources\Images\backgroundimagetwo.png" />
 	  <None Remove="Resources\Images\backgroundtwo.png" />
 	  <None Remove="Resources\Images\femaleicon.png" />
 	  <None Remove="Resources\Images\logo.png" />
@@ -76,10 +77,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPageTwo.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\RoomPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SignUpPage.xaml">
