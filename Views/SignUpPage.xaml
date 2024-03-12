@@ -1,54 +1,170 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DeskHubMobile.Views.SignUpPage"
-             Title="SignUpPage">
+<ContentPage
+    x:Class="DeskHubMobile.Views.SignUpPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="SignUpPage">
 
-    <AbsoluteLayout >
-        <!-- Background Color -->
-        <Image Source="backgroundcolor.png" Aspect="AspectFill"
-               AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+    <AbsoluteLayout>
+        <!--  Background Color  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundcolor.png" />
 
-        <!-- Logo Top Middle -->
-        <Image Source="logo.png" Aspect="AspectFit"
-               AbsoluteLayout.LayoutBounds="0.5,0.05,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+        <!--  Logo Top Middle  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.05,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="AspectFit"
+            Source="logo.png" />
 
-        <!-- Background Image -->
-        <Image Source="backgroundimage.png" Aspect="Center"
-               AbsoluteLayout.LayoutBounds="0.5,0.6,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+        <!--  Background Image  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.6,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="Center"
+            Source="backgroundimage.png" />
 
-        <!-- Frame Positioned at Lower Middle -->
-        <Frame BorderColor="Transparent" BackgroundColor="White" HeightRequest="600" WidthRequest="300" CornerRadius="25"
-               AbsoluteLayout.LayoutBounds="0.5,0.8,0.9,0.2" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+        <!--  Frame Positioned at Lower Middle  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.8,0.9,0.2"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="25"
+            HeightRequest="600"
+            WidthRequest="300">
             <ScrollView>
                 <StackLayout>
-                    <!-- Scrollable Content -->
-                    <Entry Placeholder="First Name" FontAttributes="Bold" TextColor="#25936B" FontSize="18" BackgroundColor="Transparent" Margin="10" PlaceholderColor="#49A686"/>
-                    <Entry Placeholder="Middle Name" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Entry Placeholder="Last Name" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Entry Placeholder="Email" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Entry Placeholder="Phone" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-       
-                    <Label Text="Gender" FontAttributes="Bold" TextColor="#49A686"  FontSize="18" BackgroundColor="Transparent" Margin="13,10,0,10"/>
-                    <StackLayout Orientation="Horizontal" Margin="10">
-                    
-                    <RadioButton/>
-                    <Image Source="maleicon.png" Scale="1.2" Margin="-10,0,50,0"/>
-                    <RadioButton/>
-                    <Image Source="femaleicon.png" Scale="1.2" Margin="-10,0,0,0"/>
+                    <!--  Scrollable Content  -->
+                    <Entry
+                        x:Name="txtFirstName"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="First Name"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Entry
+                        x:Name="txtMiddleName"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Middle Name"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Entry
+                        x:Name="txtLastName"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Last Name"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Entry
+                        x:Name="txtemailEntry"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Email"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Entry
+                        x:Name="txtPhone"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Phone"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+
+                    <Label
+                        Margin="13,10,0,10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Gender"
+                        TextColor="#49A686" />
+                    <StackLayout Margin="10" Orientation="Horizontal">
+
+                        <RadioButton x:Name="rdoMale" />
+                        <Image
+                            Margin="-10,0,50,0"
+                            Scale="1.2"
+                            Source="maleicon.png" />
+                        <RadioButton x:Name="rdoFemale" />
+                        <Image
+                            Margin="-10,0,0,0"
+                            Scale="1.2"
+                            Source="femaleicon.png" />
 
 
 
                     </StackLayout>
-                    <Entry Placeholder="Address" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Label Text="Birthday" FontAttributes="Bold" TextColor="#25936B"  FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <DatePicker MinimumDate="02/01/1955" MaximumDate="12/31/2024" Date="01/01/2000" Margin="9,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="18" />
-                    <Entry Placeholder="Username" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Entry Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Button BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" Margin="0,0,0,100"/>
+                    <Entry
+                        x:Name="txtAddress"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Address"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Label
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Birthday"
+                        TextColor="#25936B" />
+                    <DatePicker
+                        x:Name="pkrBirthday"
+                        Margin="9,0,0,0"
+                        Date="01/01/2000"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        MaximumDate="12/31/2024"
+                        MinimumDate="02/01/1955"
+                        TextColor="Black" />
+                    <Entry
+                        x:Name="txtusernameEntry"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Username"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Entry
+                        x:Name="txtpasswordEntry"
+                        Margin="10"
+                        BackgroundColor="Transparent"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Placeholder="Password"
+                        PlaceholderColor="#49A686"
+                        TextColor="#25936B" />
+                    <Frame
+                        AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90"
+                        AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent">
+                        <Button
+                            Margin="0,0,0,100"
+                            BackgroundColor="#25936B"
+                            Clicked="OnSignUpClickedBtn"
+                            FontSize="22"
+                            Text="Submit"
+                            TextColor="#FFFFFF" />
                     </Frame>
-                    <!-- Add more content as needed -->
+                    <!--  Add more content as needed  -->
                 </StackLayout>
             </ScrollView>
         </Frame>
