@@ -4,8 +4,21 @@
              x:Class="DeskHubMobile.Views.HomePage"
              Title="HomePage">
     <AbsoluteLayout >
+
+       
+        
         <!-- BackgroundImage -->
         <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
         AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+            
+        <Frame   AbsoluteLayout.LayoutBounds="0.5,0.05,.6,50"  AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" CornerRadius="18" BackgroundColor="#49A686" BorderColor="Transparent">
+            <HorizontalStackLayout>
+                <Image Source="searchicon.png" Scale=".9" />
+                <Entry   Placeholder="Search" TextColor="White" FontSize="15" HeightRequest="400"/>
+            </HorizontalStackLayout>
+        </Frame>
+
     </AbsoluteLayout>
+        
+        
 </ContentPage>
