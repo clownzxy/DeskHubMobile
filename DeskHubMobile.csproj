@@ -62,8 +62,12 @@
 	  <None Remove="Resources\Images\backgroundimagetwo.png" />
 	  <None Remove="Resources\Images\backgroundtwo.png" />
 	  <None Remove="Resources\Images\femaleicon.png" />
+	  <None Remove="Resources\Images\homeicon.png" />
+	  <None Remove="Resources\Images\homeicontwo.png" />
+	  <None Remove="Resources\Images\infoicon.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\maleicon.png" />
+	  <None Remove="Resources\Images\roomicon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -84,9 +88,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\LoginPageTwo.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\RoomPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SignUpPage.xaml">

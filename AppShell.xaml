@@ -5,12 +5,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DeskHubMobile.Views"
     Shell.FlyoutBehavior="Disabled"
-    Shell.NavBarIsVisible="False"
+    Shell.NavBarIsVisible="false"
+    Shell.TabBarTitleColor="#25936B"
+    Shell.TabBarForegroundColor="#25936B"
     Title="DeskHubMobile">
 
-    <ShellContent
+
+    <TabBar x:Name="Tabs">
+        <Tab  Icon="infoicon.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
+        </Tab>
+        <Tab  Icon="homeicontwo.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
+        </Tab>
+        <Tab  Icon="roomicon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
+        </Tab>
+    </TabBar>
+
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage" />
+        Route="HomePage" />-->
 
 </Shell>
