@@ -9,6 +9,7 @@ namespace DeskHubMobile
             InitializeComponent();
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(SignUpPage), typeof(SignUpPage));
+            Routing.RegisterRoute(nameof(LoginPageTwo), typeof(LoginPageTwo));
         }
     }
 }
