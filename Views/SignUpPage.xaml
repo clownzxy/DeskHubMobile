@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeskHubMobile.Views.SignUpPage"
+             Title="SignUpPage">
+
+    <AbsoluteLayout >
+        <!-- Background Color -->
+        <Image Source="backgroundcolor.png" Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+
+        <!-- Logo Top Middle -->
+        <Image Source="logo.png" Aspect="AspectFit"
+               AbsoluteLayout.LayoutBounds="0.5,0.05,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+
+        <!-- Background Image -->
+        <Image Source="backgroundimage.png" Aspect="Center"
+               AbsoluteLayout.LayoutBounds="0.5,0.6,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+
+        <!-- Frame Positioned at Lower Middle -->
+        <Frame BorderColor="Transparent" BackgroundColor="White" HeightRequest="600" WidthRequest="300" CornerRadius="25"
+               AbsoluteLayout.LayoutBounds="0.5,0.8,0.9,0.2" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <ScrollView>
+                <StackLayout>
+                    <!-- Scrollable Content -->
+                    <Entry Placeholder="First Name" FontAttributes="Bold" TextColor="#25936B" FontSize="18" BackgroundColor="Transparent" Margin="10" PlaceholderColor="#49A686"/>
+                    <Entry Placeholder="Middle Name" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Last Name" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Email" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Phone" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Label Text="Gender" FontAttributes="Bold" TextColor="#49A686"  FontSize="18" BackgroundColor="Transparent" Margin="13,10,0,10"/>
+                    <HorizontalStackLayout>
+                        <RadioButton>
+                            <RadioButton.Content>
+                                <Image Source="maleicon.png"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                    </HorizontalStackLayout>
+                    <Entry Placeholder="Address" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Birthday" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Username" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Entry Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <!-- Add more content as needed -->
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </AbsoluteLayout>
+
+</ContentPage>
