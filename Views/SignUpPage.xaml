@@ -42,10 +42,12 @@
                     </StackLayout>
                     <Entry Placeholder="Address" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <Label Text="Birthday" FontAttributes="Bold" TextColor="#25936B"  FontSize="18" BackgroundColor="Transparent" Margin="10"/>
-                    <DatePicker MinimumDate="02/01/1955" MaximumDate="12/31/2024" Date="01/01/2000" Margin="9,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="18"/>
-                    
+                    <DatePicker MinimumDate="02/01/1955" MaximumDate="12/31/2024" Date="01/01/2000" Margin="9,0,0,0" TextColor="Black" FontAttributes="Bold" FontSize="18" />
                     <Entry Placeholder="Username" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
                     <Entry Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
+                    <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent">
+                        <Button BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" Margin="0,0,0,100"/>
+                    </Frame>
                     <!-- Add more content as needed -->
                 </StackLayout>
             </ScrollView>
