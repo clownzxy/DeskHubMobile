@@ -8,14 +8,15 @@
     Shell.NavBarIsVisible="false"
     Shell.TabBarTitleColor="#25936B"
     Shell.TabBarForegroundColor="#25936B"
-    Title="DeskHubMobile">
+    Title="DeskHubMobile"
+    >
 
 
-    <TabBar x:Name="Tabs">
+    <TabBar x:Name="Tabs" >
         <Tab  Icon="infoicon.png" >
-            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
+            <ShellContent ContentTemplate="{DataTemplate local:InfoPage}" Route="InfoPage"/>
         </Tab>
-        <Tab  Icon="homeicontwo.png">
+        <Tab  Icon="homeicon.png" >
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
         </Tab>
         <Tab  Icon="roomicon.png">
