@@ -59,7 +59,7 @@
                     <Entry x:Name="txtpasswordEntry" Placeholder="Password" FontAttributes="Bold" TextColor="#25936B" PlaceholderColor="#49A686" FontSize="18" BackgroundColor="Transparent" Margin="10"/>
 
                     <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Button BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" />
+                        <Button Clicked="OnSignUpClickedBtn"  BackgroundColor="#25936B" Text="Submit" TextColor="#FFFFFF" FontSize="22" />
                     </Frame>
 
                     <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,0,0,100">

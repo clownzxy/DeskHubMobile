@@ -11,7 +11,7 @@
     Title="DeskHubMobile">
 
 
-    <TabBar x:Name="Tabs">
+    <!--<TabBar x:Name="Tabs">
         <Tab  Icon="infoicon.png" >
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
         </Tab>
@@ -21,11 +21,11 @@
         <Tab  Icon="roomicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
         </Tab>
-    </TabBar>
+    </TabBar>>-->
 
-    <!--<ShellContent
+    <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage" />-->
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="SignUpPage" />
 
 </Shell>
