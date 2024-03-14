@@ -83,8 +83,7 @@
                         FontSize="18"
                         Placeholder="Phone"
                         PlaceholderColor="#49A686"
-                        TextColor="#25936B" 
-                        />
+                        TextColor="#25936B" />
                     <Label
                         Margin="13,10,0,10"
                         BackgroundColor="Transparent"
@@ -93,12 +92,12 @@
                         Text="Gender"
                         TextColor="#49A686" />
                     <StackLayout Margin="10" Orientation="Horizontal">
-                        <RadioButton x:Name="rdoMale"/>
+                        <RadioButton x:Name="rdoMale" />
                         <Image
                             Margin="-10,0,50,0"
                             Scale="1.2"
                             Source="maleicon.png" />
-                        <RadioButton x:Name="rdoFemale"/>
+                        <RadioButton x:Name="rdoFemale" />
                         <Image
                             Margin="-10,0,0,0"
                             Scale="1.2"
@@ -106,7 +105,6 @@
                     </StackLayout>
                     <Entry
                         x:Name="txtAddress"
-                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -123,7 +121,6 @@
                         TextColor="#25936B" />
                     <DatePicker
                         x:Name="pkrBirthday"
-                        
                         Margin="9,0,0,0"
                         Date="01/01/2000"
                         FontAttributes="Bold"
@@ -133,7 +130,6 @@
                         TextColor="Black" />
                     <Entry
                         x:Name="txtusernameEntry"
-                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -144,7 +140,6 @@
 
                     <Entry
                         x:Name="txtpasswordEntry"
-                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -160,6 +155,7 @@
                         BorderColor="Transparent">
                         <Button
                             BackgroundColor="#25936B"
+                            Clicked="OnSignUpClickedBtn"
                             FontSize="22"
                             Text="Submit"
                             TextColor="#FFFFFF" />
