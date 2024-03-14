@@ -19,7 +19,7 @@
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage" />
         </Tab>
         <Tab Icon="roomicon.png">
-            <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage" />
+            <ShellContent ContentTemplate="{DataTemplate local:RoomPage}" Route="RoomPage" />
         </Tab>
     </TabBar>
 

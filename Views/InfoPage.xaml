@@ -19,14 +19,18 @@
        AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Black">
             <ScrollView>
                 <StackLayout Spacing="10">
-                    <Image Source="testimage.png"/>
-                    <Image Source="testimage.png"/>
-                    <Image Source="testimage.png"/>
-                    <Image Source="testimage.png"/>
-                    <Image Source="testimage.png"/>
-                    <Image Source="testimage.png"/>
-
-
+                    <Frame HasShadow="True" CornerRadius="15">
+                        <Image Source="testimage.png"/>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="20">
+                        <Image Source="testimage.png"/>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="20">
+                        <Image Source="testimage.png"/>
+                    </Frame>
+                    <Frame HasShadow="True" CornerRadius="20">
+                        <Image Source="testimage.png"/>
+                    </Frame>
                 </StackLayout>
             </ScrollView>
         </Frame>
