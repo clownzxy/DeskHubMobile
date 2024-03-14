@@ -68,6 +68,7 @@
 	  <None Remove="Resources\Images\maleicon.png" />
 	  <None Remove="Resources\Images\roomicon.png" />
 	  <None Remove="Resources\Images\searchicon.png" />
+	  <None Remove="Resources\Images\testimage.png" />
 	</ItemGroup>
 
 	<ItemGroup>

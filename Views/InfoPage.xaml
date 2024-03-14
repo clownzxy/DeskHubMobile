@@ -12,10 +12,25 @@
 
 
 
-        <Label Text="Room Details" FontAttributes="Bold" FontSize="40" TextColor="White" AbsoluteLayout.LayoutBounds="1.8,0.2,0.9,450" 
-       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-       />
+        <Label Text="Room Details" FontAttributes="Bold" FontSize="40" TextColor="White" AbsoluteLayout.LayoutBounds="1.8,0.1,0.9,450" 
+       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  />
 
+        <Frame AbsoluteLayout.LayoutBounds="0.5,0.75,0.9,630" 
+       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Black">
+            <ScrollView>
+                <StackLayout Spacing="10">
+                    <Image Source="testimage.png"/>
+                    <Image Source="testimage.png"/>
+                    <Image Source="testimage.png"/>
+                    <Image Source="testimage.png"/>
+                    <Image Source="testimage.png"/>
+                    <Image Source="testimage.png"/>
+
+
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+        
     </AbsoluteLayout>
 
 </ContentPage>
