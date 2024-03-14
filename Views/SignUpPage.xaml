@@ -40,6 +40,7 @@
                 <StackLayout>
                     <!--  Scrollable Content  -->
                     <Entry
+                        x:Name="txtFirstName"
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -48,6 +49,7 @@
                         PlaceholderColor="#49A686"
                         TextColor="#25936B" />
                     <Entry
+                        x:Name="txtMiddleName"
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -56,6 +58,7 @@
                         PlaceholderColor="#49A686"
                         TextColor="#25936B" />
                     <Entry
+                        x:Name="txtLastName"
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -64,6 +67,7 @@
                         PlaceholderColor="#49A686"
                         TextColor="#25936B" />
                     <Entry
+                        x:Name="txtemailEntry"
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -72,13 +76,15 @@
                         PlaceholderColor="#49A686"
                         TextColor="#25936B" />
                     <Entry
+                        x:Name="txtPhone"
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
                         FontSize="18"
                         Placeholder="Phone"
                         PlaceholderColor="#49A686"
-                        TextColor="#25936B" />
+                        TextColor="#25936B" 
+                        />
                     <Label
                         Margin="13,10,0,10"
                         BackgroundColor="Transparent"
@@ -87,18 +93,20 @@
                         Text="Gender"
                         TextColor="#49A686" />
                     <StackLayout Margin="10" Orientation="Horizontal">
-                        <RadioButton />
+                        <RadioButton x:Name="rdoMale"/>
                         <Image
                             Margin="-10,0,50,0"
                             Scale="1.2"
                             Source="maleicon.png" />
-                        <RadioButton />
+                        <RadioButton x:Name="rdoFemale"/>
                         <Image
                             Margin="-10,0,0,0"
                             Scale="1.2"
                             Source="femaleicon.png" />
                     </StackLayout>
                     <Entry
+                        x:Name="txtAddress"
+                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -114,6 +122,8 @@
                         Text="Birthday"
                         TextColor="#25936B" />
                     <DatePicker
+                        x:Name="pkrBirthday"
+                        
                         Margin="9,0,0,0"
                         Date="01/01/2000"
                         FontAttributes="Bold"
@@ -122,6 +132,8 @@
                         MinimumDate="02/01/1955"
                         TextColor="Black" />
                     <Entry
+                        x:Name="txtusernameEntry"
+                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"
@@ -131,6 +143,8 @@
                         TextColor="#25936B" />
 
                     <Entry
+                        x:Name="txtpasswordEntry"
+                        
                         Margin="10"
                         BackgroundColor="Transparent"
                         FontAttributes="Bold"

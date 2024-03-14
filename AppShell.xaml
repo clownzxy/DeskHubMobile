@@ -22,11 +22,11 @@
         <Tab  Icon="roomicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
         </Tab>
-    </TabBar>
+    </TabBar>-->
 
-    <!--<ShellContent
+    <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:HomePage}"
-        Route="HomePage" />-->
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="HomePage" />
 
 </Shell>
