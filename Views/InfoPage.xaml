@@ -10,7 +10,12 @@
         <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
         AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
 
-        
+
+
+        <Label Text="Room Details" FontAttributes="Bold" FontSize="40" TextColor="White" AbsoluteLayout.LayoutBounds="1.8,0.2,0.9,450" 
+       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+       />
+
     </AbsoluteLayout>
 
 </ContentPage>

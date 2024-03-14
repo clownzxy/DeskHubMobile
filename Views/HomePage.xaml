@@ -36,7 +36,7 @@
 
             <ScrollView>
                 <StackLayout>
-                    <!-- Carousel View -->
+                    <!-- Solo -->
                     <CarouselView ItemsSource="{Binding ImagePaths}">
                         <CarouselView.ItemsLayout>
                             <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
@@ -48,30 +48,61 @@
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
+
+                    <!-- more than 1 persons-->
+                    <CarouselView ItemsSource="{Binding ImagePaths}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFit"
+            HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <!-- more than 5 persons-->
+                    <CarouselView ItemsSource="{Binding ImagePaths}">
+                        <CarouselView.ItemsLayout>
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                        </CarouselView.ItemsLayout>
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding}" Aspect="AspectFit"
+            HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
                 </StackLayout>
             </ScrollView>
+
 
         </Frame>
 
         <!-- Time In and Time Out -->
-        <Frame AbsoluteLayout.LayoutBounds="0.5,0.3,0.9,450" 
-       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-       BorderColor="Black" 
-       BackgroundColor="Transparent">
-
-            <ScrollView>
-                <StackLayout>
-                    <!-- Carousel View -->
-                    <CarouselView ItemsSource="{Binding TextItems}">
-                        <CarouselView.ItemTemplate>
-                            <DataTemplate >
-                                <Label Text="{Binding}" TextColor="Black" FontSize="18" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                            </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
-                   
-                </StackLayout>
-            </ScrollView>
+        <Frame   AbsoluteLayout.LayoutBounds="0.5,1,.9,200"  
+                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+                 CornerRadius="10" 
+                 BackgroundColor="Transparent" 
+                 BorderColor="Transparent">
+            <VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="Time In:" FontAttributes="Bold" FontSize="18" TextColor="White" Margin="15,0,0,0"/>
+                        <Frame HeightRequest="55" WidthRequest="133" CornerRadius="20" >
+                            <TimePicker Time="4:15:26" TextColor="#25936B" FontAttributes="Bold" FontSize="20" BackgroundColor="White" Margin="0,-10,0,-15.9"/>
+                        </Frame>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout Margin="45,0,0,0">
+                        <Label Text="Time Out:" FontAttributes="Bold" FontSize="18" TextColor="White" Margin="15,0,0,0"/>
+                        <Frame HeightRequest="55" WidthRequest="133" CornerRadius="20">
+                            <TimePicker Time="4:15:26" TextColor="#25936B" FontAttributes="Bold" FontSize="20" BackgroundColor="White" Margin="0,-10,0,-15.9"/>
+                        </Frame>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <Button Margin="0,20,0,0" CornerRadius="20" Text="Check Room Availability" FontAttributes="Bold" WidthRequest="250" BackgroundColor="#25936B"/>
+            </VerticalStackLayout>
 
         </Frame>
 
