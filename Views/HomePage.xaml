@@ -1,87 +1,95 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DeskHubMobile.Views.HomePage"
-             Title="HomePage">
-    <AbsoluteLayout >
+<ContentPage
+    x:Class="DeskHubMobile.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="HomePage">
+    <AbsoluteLayout>
 
-        <!-- BackgroundImage -->
-        <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
-        AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+        <!--  BackgroundImage  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundimagetwo.png" />
 
-        <!-- Search Bar -->
-        <Frame   AbsoluteLayout.LayoutBounds="0.5,0.05,.6,40"  
-                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-                 CornerRadius="18" 
-                 BackgroundColor="#49A686" 
-                 BorderColor="Transparent" 
-                 Padding="0,0,0,0"
-                 HasShadow="True" >
+        <!--  Search Bar  -->
+        <Frame
+            Padding="0,0,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.05,.6,40"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="#49A686"
+            BorderColor="Transparent"
+            CornerRadius="18"
+            HasShadow="True">
             <HorizontalStackLayout>
-                <Image Source="searchicon.png" 
-                       Scale="1" 
-                       Margin="10,0,0,0"/>
-                <Entry   Placeholder="Search" 
-                         TextColor="White" 
-                         FontSize="15" 
-                         HeightRequest="400"
-                         FontFamily="myfontbold"/>
+                <Image
+                    Margin="10,0,0,0"
+                    Scale="1"
+                    Source="searchicon.png" />
+                <Entry
+                    FontFamily="myfontbold"
+                    FontSize="15"
+                    HeightRequest="400"
+                    Placeholder="Search"
+                    TextColor="White" />
             </HorizontalStackLayout>
         </Frame>
 
-        <!-- Rooms Carousel View -->
-        <Frame AbsoluteLayout.LayoutBounds="0.5,0.3,0.9,450" 
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-               BorderColor="Black" 
-               BackgroundColor="Transparent">
+        <!--  Rooms Carousel View  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.3,0.9,450"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Black">
 
             <ScrollView>
                 <StackLayout>
-                    <!-- Solo -->
+                    <!--  Solo  -->
                     <CarouselView ItemsSource="{Binding ImagePaths}">
                         <CarouselView.ItemsLayout>
-                            <LinearItemsLayout ItemSpacing="10" 
-                                               Orientation="Horizontal" />
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
                         </CarouselView.ItemsLayout>
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding}" 
-                                       Aspect="AspectFit"
-                                       HorizontalOptions="Center" 
-                                       VerticalOptions="CenterAndExpand"/>
-                                
+                                <Image
+                                    Aspect="AspectFit"
+                                    HorizontalOptions="Center"
+                                    Source="{Binding}"
+                                    VerticalOptions="CenterAndExpand" />
+
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
 
-                    <!-- more than 1 persons-->
+                    <!--  more than 1 persons  -->
                     <CarouselView ItemsSource="{Binding ImagePaths}">
                         <CarouselView.ItemsLayout>
-                            <LinearItemsLayout ItemSpacing="10" 
-                                               Orientation="Horizontal" />
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
                         </CarouselView.ItemsLayout>
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding}" 
-                                       Aspect="AspectFit"
-                                       HorizontalOptions="Center" 
-                                       VerticalOptions="CenterAndExpand"/>
+                                <Image
+                                    Aspect="AspectFit"
+                                    HorizontalOptions="Center"
+                                    Source="{Binding}"
+                                    VerticalOptions="CenterAndExpand" />
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
 
-                    <!-- more than 5 persons-->
+                    <!--  more than 5 persons  -->
                     <CarouselView ItemsSource="{Binding ImagePaths}">
                         <CarouselView.ItemsLayout>
-                            <LinearItemsLayout ItemSpacing="10" 
-                                               Orientation="Horizontal" />
+                            <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
                         </CarouselView.ItemsLayout>
                         <CarouselView.ItemTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding}" 
-                                       Aspect="AspectFit"
-                                       HorizontalOptions="Center" 
-                                       VerticalOptions="CenterAndExpand"/>
+                                <Image
+                                    Aspect="AspectFit"
+                                    HorizontalOptions="Center"
+                                    Source="{Binding}"
+                                    VerticalOptions="CenterAndExpand" />
                             </DataTemplate>
                         </CarouselView.ItemTemplate>
                     </CarouselView>
@@ -91,42 +99,73 @@
 
         </Frame>
 
-        <!-- Time In and Time Out -->
-        <Frame   AbsoluteLayout.LayoutBounds="0.5,1,.9,200"  
-                 AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-                 CornerRadius="10" 
-                 BackgroundColor="Transparent" 
-                 BorderColor="Transparent">
+        <!--  Time In and Time Out  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,1,.9,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent"
+            CornerRadius="10">
             <VerticalStackLayout>
                 <HorizontalStackLayout>
                     <VerticalStackLayout>
-                        <Label Text="Time In:"  FontSize="18" TextColor="White" Margin="15,0,0,0" FontFamily="myfontbold"/>
-                        <Frame HeightRequest="55" WidthRequest="133" CornerRadius="20" HasShadow="True" Padding="0,0,0,0">
-                            <TimePicker Time="1:00:26" 
-                                        TextColor="#25936B" 
-                                        FontAttributes="Bold" 
-                                        FontSize="20" 
-                                        BackgroundColor="White" 
-                                        Margin="25,0,25,0"
-                                        FontFamily="myfontbold"/>
+                        <Label
+                            Margin="15,0,0,0"
+                            FontFamily="myfontbold"
+                            FontSize="18"
+                            Text="Time In:"
+                            TextColor="White" />
+                        <Frame
+                            Padding="0,0,0,0"
+                            CornerRadius="20"
+                            HasShadow="True"
+                            HeightRequest="55"
+                            WidthRequest="133">
+                            <TimePicker
+                                Margin="25,0,25,0"
+                                BackgroundColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="myfontbold"
+                                FontSize="20"
+                                TextColor="#25936B"
+                                Time="1:00:26" />
                         </Frame>
                     </VerticalStackLayout>
                     <VerticalStackLayout Margin="45,0,0,0">
-                        <Label Text="Time Out:"  FontSize="18" TextColor="White" Margin="15,0,0,0" FontFamily="myfontbold"/>
-                        <Frame HeightRequest="55" WidthRequest="133" CornerRadius="20" HasShadow="True" Padding="0,0,0,0">
-                            <TimePicker Time="1:00:26" 
-                                        TextColor="#25936B" 
-                                        FontAttributes="Bold" 
-                                        FontSize="20" 
-                                        BackgroundColor="White" 
-                                        Margin="25,0,25,0"
-                                        FontFamily="myfontbold"/>
+                        <Label
+                            Margin="15,0,0,0"
+                            FontFamily="myfontbold"
+                            FontSize="18"
+                            Text="Time Out:"
+                            TextColor="White" />
+                        <Frame
+                            Padding="0,0,0,0"
+                            CornerRadius="20"
+                            HasShadow="True"
+                            HeightRequest="55"
+                            WidthRequest="133">
+                            <TimePicker
+                                Margin="25,0,25,0"
+                                BackgroundColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="myfontbold"
+                                FontSize="20"
+                                TextColor="#25936B"
+                                Time="1:00:26" />
                         </Frame>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
 
-                <Button Margin="0,20,0,0" CornerRadius="20" Text="Check Room Availability" FontAttributes="Bold" WidthRequest="250" BackgroundColor="#25936B" FontFamily="myfontbold" Padding="0,0,0,0"/>
-               
+                <Button
+                    Margin="0,20,0,0"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#25936B"
+                    CornerRadius="20"
+                    FontAttributes="Bold"
+                    FontFamily="myfontbold"
+                    Text="Check Room Availability"
+                    WidthRequest="250" />
+
             </VerticalStackLayout>
 
         </Frame>

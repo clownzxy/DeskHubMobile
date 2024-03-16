@@ -1,72 +1,235 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DeskHubMobile.Views.RoomPage"
-             Title="RoomPage">
-    <AbsoluteLayout >
+<ContentPage
+    x:Class="DeskHubMobile.Views.RoomPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RoomPage">
+    <AbsoluteLayout>
 
-        <!-- BackgroundImage -->
-        <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
-     AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
+        <!--  BackgroundImage  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundimagetwo.png" />
 
 
-        <!-- Logo Button -->
+        <!--  Logo Button  -->
         <ImageButton
-        AbsoluteLayout.LayoutBounds="0.5,0.01,100,130"
-        AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
-        Aspect="AspectFit"
-        Source="logo.png" />
+            AbsoluteLayout.LayoutBounds="0.5,0.01,100,130"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="AspectFit"
+            Source="logo.png" />
 
-        <Label Text="Rented Room" 
-               TextColor="White"  
-               FontSize="30" 
-               AbsoluteLayout.LayoutBounds="0.5,0.44,.9,200"
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-               Margin="10,-40,0,0"
-               FontFamily="myfontbold"/>
-        
-        <Frame BackgroundColor="White" 
-               BorderColor="Transparent" 
-               AbsoluteLayout.LayoutBounds="0.5,0.45,.9,190"
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-               CornerRadius="20" HasShadow="True">
-            
+        <!--  Label  -->
+        <Label
+            Margin="10,-40,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.44,.9,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            FontFamily="myfontbold"
+            FontSize="30"
+            Text="Rented Room"
+            TextColor="White" />
+
+        <!--  Rented Room Frame  -->
+        <Frame
+            Padding="0,0,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.45,.9,190"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="20"
+            HasShadow="True">
+
             <StackLayout>
-                <Label Text="Room Type:" 
-                       FontAttributes="Bold" 
-                       FontSize="17" 
-                       Margin="50,-10,0,0"  
-                       FontFamily="myfont"/>
-                
-                <Label Text="Room Type:" 
-                       FontAttributes="Bold" 
-                       FontSize="17" 
-                       Margin="50,-10,0,0"  
-                       FontFamily="myfont"/>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="90,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Room Type:" />
 
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Room"
+                        TextColor="#595353" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="40,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Time In:" />
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="00:00"
+                        TextColor="#595353" />
+
+                    <Label
+                        Margin="30,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Time In:" />
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="00:00"
+                        TextColor="#595353" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Frame
+                        Margin="30,0,0,0"
+                        Padding="0,0,0,0"
+                        CornerRadius="20"
+                        HasShadow="True"
+                        HeightRequest="90"
+                        WidthRequest="150">
+                        <Image Source="testimagetwo.png" />
+                    </Frame>
+                    <VerticalStackLayout>
+                        <Button
+                            Margin="30,10,0,0"
+                            Padding="0,0,0,0"
+                            BackgroundColor="#25936B"
+                            CornerRadius="20"
+                            FontFamily="myfonts"
+                            HeightRequest="30"
+                            Text="Snacks/Drinks"
+                            WidthRequest="130" />
+
+                        <Button
+                            Margin="30,10,0,0"
+                            Padding="0,0,0,0"
+                            BackgroundColor="#25936B"
+                            CornerRadius="20"
+                            FontFamily="myfonts"
+                            HeightRequest="30"
+                            Text="Time Duration"
+                            WidthRequest="130" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="40,0,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Subtotal:" />
+                    <Label
+                        Margin="10,0,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Price"
+                        TextColor="#595353" />
+
+
+                </HorizontalStackLayout>
             </StackLayout>
         </Frame>
 
-        <Label Text="Reserved Room" 
-               TextColor="White"  
-               FontSize="30" 
-               Margin="10,-40,0,0" 
-               AbsoluteLayout.LayoutBounds="0.5,0.94,.9,200"
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
-               FontFamily="myfontbold"/>
-        
-        <Frame BackgroundColor="White" 
-               BorderColor="Transparent" 
-               AbsoluteLayout.LayoutBounds="0.5,0.94,.9,190"
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-               CornerRadius="20" 
-               HasShadow="True">
-            
-            <Label Text="Room Type:" 
-                   FontAttributes="Bold" 
-                   FontSize="17" 
-                   Margin="50,-10,0,0" 
-                   FontFamily="myfont"/>
+        <Label
+            Margin="10,-40,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.94,.9,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            FontFamily="myfontbold"
+            FontSize="30"
+            Text="Reserved Room"
+            TextColor="White" />
+
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.94,.9,190"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="20"
+            HasShadow="True"
+            Padding="0,0,0,0">
+
+            <StackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="90,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Room Type:" />
+
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Room"
+                        TextColor="#595353" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="40,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Time In:" />
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="00:00"
+                        TextColor="#595353" />
+
+                    <Label
+                        Margin="30,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Time In:" />
+                    <Label
+                        Margin="10,-10,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="00:00"
+                        TextColor="#595353" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Frame
+                        Padding="0,0,0,0"
+                        Margin="30,0,0,0"
+                        CornerRadius="20"
+                        HasShadow="True"
+                        HeightRequest="90"
+                        WidthRequest="150">
+                        <Image Source="testimagetwo.png" />
+                    </Frame>
+                    <VerticalStackLayout>
+                        <Button
+                            Margin="15,30,0,0"
+                            Padding="0,0,0,0"
+                            BackgroundColor="#D33434"
+                            CornerRadius="20"
+                            FontFamily="myfontsbold"
+                            FontSize="12"
+                            HeightRequest="30"
+                            Text="Cancel Reservation"
+                            WidthRequest="140" />
+
+
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        Margin="40,0,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Subtotal:" />
+                    <Label
+                        Margin="10,0,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="17"
+                        Text="Price"
+                        TextColor="#595353" />
+
+
+                </HorizontalStackLayout>
+            </StackLayout>
 
         </Frame>
 

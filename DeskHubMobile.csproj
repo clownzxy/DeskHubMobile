@@ -71,6 +71,7 @@
 	  <None Remove="Resources\Images\roomicon.png" />
 	  <None Remove="Resources\Images\searchicon.png" />
 	  <None Remove="Resources\Images\testimage.png" />
+	  <None Remove="Resources\Images\testimagetwo.png" />
 	</ItemGroup>
 
 	<ItemGroup>

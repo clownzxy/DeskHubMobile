@@ -1,33 +1,60 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DeskHubMobile.Views.LoginPage"
-             Title="LoginPage"
-             Shell.BackgroundColor="#25936B">
+<ContentPage
+    x:Class="DeskHubMobile.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPage"
+    Shell.BackgroundColor="#25936B">
 
     <AbsoluteLayout>
-        <!--Background Color-->
-        <Image Source="backgroundcolor.png" Aspect="AspectFill"
-               AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
-        
-        <!--Logo Top Middle-->
-        <Image Source="logo.png" Aspect="AspectFit"
-            AbsoluteLayout.LayoutBounds="0.5,0.05,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
-        
-        <!--Background Image-->
-        <Image Source="backgroundimage.png" Aspect="Center"
-               AbsoluteLayout.LayoutBounds="0.5,0.6,200,200" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+        <!--  Background Color  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundcolor.png" />
+
+        <!--  Logo Top Middle  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.05,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="AspectFit"
+            Source="logo.png" />
+
+        <!--  Background Image  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.6,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="Center"
+            Source="backgroundimage.png" />
 
 
-        <!--Button Login-->
-        <Frame  AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Transparent">
-            <Button BackgroundColor="#25936B" Text="Login" TextColor="#FFFFFF" FontSize="22"/>
+        <!--  Button Login  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.85,0.7,90"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent">
+            <Button
+                BackgroundColor="#25936B"
+                FontSize="22"
+                Text="Login"
+                TextColor="#FFFFFF" />
         </Frame>
 
-        <!--Button SignUp-->
-        <Frame  AbsoluteLayout.LayoutBounds="0.5,0.95,0.7,90" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  BackgroundColor="Transparent" BorderColor="Transparent">
-            <Button BackgroundColor="#FFFFFF" Text="Sign Up" TextColor="#25936B" FontSize="22" FontAttributes="Bold"/>
+        <!--  Button SignUp  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.95,0.7,90"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent">
+            <Button
+                BackgroundColor="#FFFFFF"
+                FontAttributes="Bold"
+                FontSize="22"
+                Text="Sign Up"
+                TextColor="#25936B" />
         </Frame>
     </AbsoluteLayout>
-    
+
 </ContentPage>

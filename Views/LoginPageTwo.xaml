@@ -1,82 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DeskHubMobile.Views.LoginPageTwo"
-             Title="LoginPageTwo">
-    
-    <AbsoluteLayout >
-        <!-- Background Color -->
-        <Image Source="backgroundcolor.png" 
-               Aspect="AspectFill"
-               AbsoluteLayout.LayoutBounds="0,0,1,1" 
-               AbsoluteLayout.LayoutFlags="All"/>
+<ContentPage
+    x:Class="DeskHubMobile.Views.LoginPageTwo"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="LoginPageTwo">
 
-        <!-- Logo Top Middle -->
-        <Image Source="logo.png" 
-               Aspect="AspectFit"
-               AbsoluteLayout.LayoutBounds="0.5,0.05,200,200" 
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+    <AbsoluteLayout>
+        <!--  Background Color  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundcolor.png" />
 
-        <!-- Background Image -->
-        <Image Source="backgroundimage.png" Aspect="Center"
-               AbsoluteLayout.LayoutBounds="0.5,0.6,200,200" 
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
+        <!--  Logo Top Middle  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.05,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="AspectFit"
+            Source="logo.png" />
 
-        
+        <!--  Background Image  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.6,200,200"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="Center"
+            Source="backgroundimage.png" />
 
-        <!-- entrybox -->
-        <Frame BorderColor="Transparent" 
-               BackgroundColor="White" HeightRequest="200" WidthRequest="300" CornerRadius="25"
-               AbsoluteLayout.LayoutBounds="0.5,0.67,0.9,0.2" 
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+
+
+        <!--  entrybox  -->
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.67,0.9,0.2"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="25"
+            HeightRequest="200"
+            WidthRequest="300">
 
             <StackLayout>
 
-                <Entry Placeholder="Email" 
-                       FontAttributes="Bold" 
-                       TextColor="#25936B" 
-                       FontSize="20" 
-                       BackgroundColor="Transparent" 
-                       Margin="10" 
-                       PlaceholderColor="#49A686"/>
+                <Entry
+                    Margin="10"
+                    BackgroundColor="Transparent"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Placeholder="Email"
+                    PlaceholderColor="#49A686"
+                    TextColor="#25936B" />
 
-                <Entry Placeholder="Password" 
-                       FontAttributes="Bold" 
-                       TextColor="#25936B" 
-                       PlaceholderColor="#49A686" 
-                       FontSize="20" 
-                       BackgroundColor="Transparent" 
-                       Margin="10" 
-                       IsPassword="True"/>
+                <Entry
+                    Margin="10"
+                    BackgroundColor="Transparent"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    IsPassword="True"
+                    Placeholder="Password"
+                    PlaceholderColor="#49A686"
+                    TextColor="#25936B" />
             </StackLayout>
         </Frame>
 
-        
 
-        <Frame  AbsoluteLayout.LayoutBounds="0.5,0.9,0.76,90" 
-                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-                BackgroundColor="Transparent" 
-                BorderColor="Transparent">
-            
-            <Button BackgroundColor="#25936B" 
-                    Text="Login" 
-                    TextColor="#FFFFFF" 
-                    FontSize="22" 
-                    FontAttributes="Bold"/>
-            
+
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.9,0.76,90"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent">
+
+            <Button
+                BackgroundColor="#25936B"
+                FontAttributes="Bold"
+                FontSize="22"
+                Text="Login"
+                TextColor="#FFFFFF" />
+
         </Frame>
 
-        <Frame  AbsoluteLayout.LayoutBounds="0.5,0.93,0.76,90" 
-                AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
-                BackgroundColor="Transparent" 
-                BorderColor="Transparent">
+        <Frame
+            AbsoluteLayout.LayoutBounds="0.5,0.93,0.76,90"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent">
 
             <StackLayout Padding="20">
-                <Button Text="New User? Register Now"  
-                        BackgroundColor="Transparent" 
-                        BorderColor="Transparent"/>
+                <Button
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    Text="New User? Register Now" />
             </StackLayout>
         </Frame>
-       
+
     </AbsoluteLayout>
 </ContentPage>
