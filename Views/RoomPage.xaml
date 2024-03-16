@@ -9,33 +9,66 @@
         <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
      AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
 
+
+        <!-- Logo Button -->
         <ImageButton
-        AbsoluteLayout.LayoutBounds="0.5,0.05,100,150"
+        AbsoluteLayout.LayoutBounds="0.5,0.01,100,130"
         AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
         Aspect="AspectFit"
         Source="logo.png" />
 
-        <Label Text="Rented Room" TextColor="White" FontAttributes="Bold" FontSize="25" AbsoluteLayout.LayoutBounds="0.5,0.45,.9,200"
-        AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Margin="10,-40,0,0"/>
-        <Frame BackgroundColor="White" BorderColor="Transparent" 
-               AbsoluteLayout.LayoutBounds="0.5,0.45,.9,200"
-               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" CornerRadius="20" HasShadow="True">
-
-            <Label Text="Room Type:" FontAttributes="Bold" FontSize="Default" Margin="50,-10,0,0"/>
+        <Label Text="Rented Room" 
+               TextColor="White"  
+               FontSize="30" 
+               AbsoluteLayout.LayoutBounds="0.5,0.44,.9,200"
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+               Margin="10,-40,0,0"
+               FontFamily="myfontbold"/>
+        
+        <Frame BackgroundColor="White" 
+               BorderColor="Transparent" 
+               AbsoluteLayout.LayoutBounds="0.5,0.45,.9,190"
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+               CornerRadius="20" HasShadow="True">
             
+            <StackLayout>
+                <Label Text="Room Type:" 
+                       FontAttributes="Bold" 
+                       FontSize="17" 
+                       Margin="50,-10,0,0"  
+                       FontFamily="myfont"/>
+                
+                <Label Text="Room Type:" 
+                       FontAttributes="Bold" 
+                       FontSize="17" 
+                       Margin="50,-10,0,0"  
+                       FontFamily="myfont"/>
 
+            </StackLayout>
         </Frame>
 
-        <Label Text="Reserved Room" TextColor="White" FontAttributes="Bold" FontSize="25" Margin="10,-40,0,0" AbsoluteLayout.LayoutBounds="0.5,0.94,.9,200"
-        AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"/>
-        <Frame BackgroundColor="White" BorderColor="Transparent" 
-         AbsoluteLayout.LayoutBounds="0.5,0.94,.9,200"
-         AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" CornerRadius="20" HasShadow="True">
-            <Label Text="Room Type:" FontAttributes="Bold" FontSize="Default" Margin="50,-10,0,0"/>
+        <Label Text="Reserved Room" 
+               TextColor="White"  
+               FontSize="30" 
+               Margin="10,-40,0,0" 
+               AbsoluteLayout.LayoutBounds="0.5,0.94,.9,200"
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+               FontFamily="myfontbold"/>
+        
+        <Frame BackgroundColor="White" 
+               BorderColor="Transparent" 
+               AbsoluteLayout.LayoutBounds="0.5,0.94,.9,190"
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+               CornerRadius="20" 
+               HasShadow="True">
+            
+            <Label Text="Room Type:" 
+                   FontAttributes="Bold" 
+                   FontSize="17" 
+                   Margin="50,-10,0,0" 
+                   FontFamily="myfont"/>
 
         </Frame>
-
-
 
     </AbsoluteLayout>
 </ContentPage>

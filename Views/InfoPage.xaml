@@ -7,30 +7,44 @@
     <AbsoluteLayout >
 
         <!-- BackgroundImage -->
-        <Image Source="backgroundimagetwo.png" Aspect="AspectFill"
+        <Image Source="backgroundimagetwo.png" Aspect="AspectFill" 
         AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"/>
 
-
-
-        <Label Text="Room Details" FontAttributes="Bold" FontSize="40" TextColor="White" AbsoluteLayout.LayoutBounds="1.8,0.1,0.9,450" 
-       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  />
+        <Label Text="Room Details" 
+               FontAttributes="Bold" 
+               FontSize="40" 
+               TextColor="White" 
+               AbsoluteLayout.LayoutBounds="1.8,0,0.9,450" 
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"  
+               FontFamily="myfontbold"/>
 
         <Frame AbsoluteLayout.LayoutBounds="0.5,0.75,0.9,630" 
-       AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" BackgroundColor="Transparent" BorderColor="Black">
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+               BackgroundColor="Transparent" 
+               BorderColor="Transparent">
+            
             <ScrollView>
                 <StackLayout Spacing="10">
-                    <Frame HasShadow="True" CornerRadius="15">
+                    <Frame HasShadow="True" 
+                           CornerRadius="15">
                         <Image Source="testimage.png"/>
                     </Frame>
-                    <Frame HasShadow="True" CornerRadius="20">
+                    
+                    <Frame HasShadow="True" 
+                           CornerRadius="20">
                         <Image Source="testimage.png"/>
                     </Frame>
-                    <Frame HasShadow="True" CornerRadius="20">
+                    
+                    <Frame HasShadow="True" 
+                           CornerRadius="20">
                         <Image Source="testimage.png"/>
                     </Frame>
-                    <Frame HasShadow="True" CornerRadius="20">
+                    
+                    <Frame HasShadow="True" 
+                           CornerRadius="20">
                         <Image Source="testimage.png"/>
                     </Frame>
+                    
                 </StackLayout>
             </ScrollView>
         </Frame>

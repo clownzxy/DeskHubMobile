@@ -57,6 +57,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\myfont.ttf" />
+	  <None Remove="Resources\Fonts\myfontbold.ttf" />
 	  <None Remove="Resources\Images\backgroundcolor.png" />
 	  <None Remove="Resources\Images\backgroundimage.png" />
 	  <None Remove="Resources\Images\backgroundimagetwo.png" />
