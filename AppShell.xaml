@@ -11,7 +11,10 @@
     Shell.TabBarTitleColor="#25936B">
 
 
-    
+    <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:ProfilePage}"
+    Route="ProfilePage" />
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
@@ -25,10 +28,7 @@
         </Tab>
     </TabBar>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:SignUpPage}"
-        Route="HomePage" />
+    
 
 
 

@@ -13,6 +13,11 @@
             Aspect="AspectFill"
             Source="backgroundimagetwo.png" />
 
+        <ImageButton
+     AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+     AbsoluteLayout.LayoutFlags="PositionProportional"
+     Source="profileicon.png" />
+
         <!--  Search Bar  -->
         <Frame
             Padding="0,0,0,0"

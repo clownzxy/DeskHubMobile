@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DeskHubMobile.Views.ProfilePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ProfilePage">
+    <AbsoluteLayout>
+
+        <!--  BackgroundImage  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundimagetwo.png" />
+
+        <ImageButton
+            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="profileicon.png" />
+
+
+        <!--  Logo Button  -->
+        <ImageButton
+            AbsoluteLayout.LayoutBounds="0.5,0.01,100,130"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            Aspect="AspectFit"
+            Source="logo.png" />
+
+
+
+        <!--  Profile Frame  -->
+        <Frame
+            Padding="0,0,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.3,.9,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="20"
+            HasShadow="True">
+
+            <HorizontalStackLayout>
+                <Image Margin="10,0,0,0" Source="maleprofileicon.png" />
+                <VerticalStackLayout>
+                    <Button
+                        Margin="0,8,0,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        FontFamily="myfont"
+                        FontSize="20"
+                        Text="name name name"
+                        TextColor="Black" />
+                    <Button
+                        Margin="-40,-35,0,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        FontFamily="myfont"
+                        FontSize="15"
+                        Text="email email email"
+                        TextColor="#878181" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+        </Frame>
+
+        <Frame
+            Padding="0,0,0,0"
+            AbsoluteLayout.LayoutBounds="0.5,0.425,.9,55"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="White"
+            BorderColor="Transparent"
+            CornerRadius="20"
+            HasShadow="True">
+
+            <HorizontalStackLayout>
+                <ImageButton
+                    Margin="70,0,0,0"
+                    Scale="0.55"
+                    Source="historyicon.png" />
+                <Button 
+                    Margin="-15,-6,0,0"
+                    BackgroundColor="Transparent"
+                    BorderColor="Transparent"
+                    FontFamily="myfontbold"
+                    FontSize="16"
+                    Text="Transaction History"
+                    TextColor="Black"/>
+            </HorizontalStackLayout>
+
+
+
+        </Frame>
+
+
+
+    </AbsoluteLayout>
+</ContentPage>

@@ -7,6 +7,10 @@
 
     <AbsoluteLayout>
 
+
+
+
+
         <!--  BackgroundImage  -->
         <Image
             AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -14,6 +18,12 @@
             Aspect="AspectFill"
             Source="backgroundimagetwo.png" />
 
+        <ImageButton
+            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="profileicon.png" />
+
+        <!--  Title Label  -->
         <Label
             AbsoluteLayout.LayoutBounds="1.8,0,0.9,450"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
@@ -23,6 +33,7 @@
             Text="Room Details"
             TextColor="White" />
 
+        <!--  Main Content Frame  -->
         <Frame
             AbsoluteLayout.LayoutBounds="0.5,0.75,0.9,630"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
@@ -50,6 +61,9 @@
                 </StackLayout>
             </ScrollView>
         </Frame>
+
+
+
 
     </AbsoluteLayout>
 

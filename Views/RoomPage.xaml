@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="RoomPage">
+    
     <AbsoluteLayout>
 
         <!--  BackgroundImage  -->
@@ -12,6 +13,11 @@
             AbsoluteLayout.LayoutFlags="All"
             Aspect="AspectFill"
             Source="backgroundimagetwo.png" />
+
+        <ImageButton
+     AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+     AbsoluteLayout.LayoutFlags="PositionProportional"
+     Source="profileicon.png" />
 
 
         <!--  Logo Button  -->
