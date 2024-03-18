@@ -100,7 +100,24 @@
                             FontFamily="myfonts"
                             HeightRequest="30"
                             Text="Snacks/Drinks"
-                            WidthRequest="130" />
+                            WidthRequest="130">
+                            <Button.Triggers>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="True">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#207755" />
+
+                                </Trigger>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="False">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#25936B" />
+
+                                </Trigger>
+                            </Button.Triggers>
+                        </Button>
 
                         <Button
                             Margin="30,10,0,0"
@@ -110,7 +127,25 @@
                             FontFamily="myfonts"
                             HeightRequest="30"
                             Text="Time Duration"
-                            WidthRequest="130" />
+                            WidthRequest="130">
+
+                            <Button.Triggers>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="True">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#207755" />
+
+                                </Trigger>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="False">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#25936B" />
+
+                                </Trigger>
+                            </Button.Triggers>
+                        </Button>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
@@ -209,7 +244,24 @@
                             FontSize="12"
                             HeightRequest="30"
                             Text="Cancel Reservation"
-                            WidthRequest="140" />
+                            WidthRequest="140">
+                            <Button.Triggers>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="True">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#982121" />
+
+                                </Trigger>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                        Value="False">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#D33434" />
+
+                                </Trigger>
+                            </Button.Triggers>
+                        </Button>
 
 
                     </VerticalStackLayout>

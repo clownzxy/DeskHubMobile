@@ -156,15 +156,38 @@
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
 
-                <Button
-                    Margin="0,20,0,0"
-                    Padding="0,0,0,0"
-                    BackgroundColor="#25936B"
-                    CornerRadius="20"
-                    FontAttributes="Bold"
-                    FontFamily="myfontbold"
-                    Text="Check Room Availability"
-                    WidthRequest="250" />
+                <Button x:Name="checkAvailabilityButton"
+                        Margin="0,20,0,0"
+                        Padding="0,0,0,0"
+                        BackgroundColor="#25936B"
+                        CornerRadius="20"
+                        FontAttributes="Bold"
+                        FontFamily="myfontbold"
+                        Text="Check Room Availability"
+                        WidthRequest="250">
+                    <Button.Triggers>
+                        <Trigger TargetType="Button"
+                        Property="IsPressed"
+                        Value="True">
+                            <Setter Property="BackgroundColor"
+                                    Value="#207755" />
+                        
+                        </Trigger>
+                        <Trigger TargetType="Button"
+                            Property="IsPressed"
+                            Value="False">
+                            <Setter Property="BackgroundColor"
+                            Value="#25936B" />
+                          
+                        </Trigger>
+                    </Button.Triggers>
+                </Button>
+
+
+
+
+
+
 
             </VerticalStackLayout>
 

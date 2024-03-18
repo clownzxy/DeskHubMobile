@@ -1,9 +1,20 @@
+using System.Diagnostics;
+
 namespace DeskHubMobile.Views;
 
 public partial class RoomPage : ContentPage
 {
-	public RoomPage()
+
+    
+    public RoomPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+
+        
+
+    }
+
+   
+
+
 }

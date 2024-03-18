@@ -158,7 +158,24 @@
                             Clicked="OnSignUpClickedBtn"
                             FontSize="22"
                             Text="Submit"
-                            TextColor="#FFFFFF" />
+                            TextColor="#FFFFFF">
+                            <Button.Triggers>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="True">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#207755" />
+
+                                </Trigger>
+                                <Trigger TargetType="Button"
+                                         Property="IsPressed"
+                                         Value="False">
+                                    <Setter Property="BackgroundColor"
+                                            Value="#25936B" />
+
+                                </Trigger>
+                            </Button.Triggers>
+                        </Button>
                     </Frame>
 
                     <Frame
