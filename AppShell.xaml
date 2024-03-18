@@ -13,8 +13,8 @@
 
     <ShellContent
     Title="Home"
-    ContentTemplate="{DataTemplate local:ProfilePage}"
-    Route="ProfilePage" />
+    ContentTemplate="{DataTemplate local:MenuPage}"
+    Route="MenuPage" />
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
