@@ -10,6 +10,7 @@
     Shell.TabBarForegroundColor="#25936B"
     Shell.TabBarTitleColor="#25936B">
 
+    
 
     <ShellContent
     Title="Home"
@@ -31,5 +32,6 @@
     
 
 
+        Route="HomePage" />
 
 </Shell>
