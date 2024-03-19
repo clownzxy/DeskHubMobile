@@ -36,10 +36,16 @@ namespace DeskHubMobile.ViewModels
 
         public void SaveToFile()
         {
+#if ANDROID
             var json = string.Empty;
             json = JsonSerializer.Serialize(userList);
-            File.WriteAllText(maindir + fileName, json);
+            var docdocamaw = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads);
+            //var docdocamaw = Android.App.Application.Context.
+
+            File.WriteAllText($"{docdocamaw.AbsoluteFile.Path}/users.txt", json);
+#endif
         }
+
 
         public void ConvertToUserList()
         {

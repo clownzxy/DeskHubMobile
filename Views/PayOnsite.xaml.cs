@@ -4,23 +4,21 @@ using System.Text.RegularExpressions;
 
 namespace DeskHubMobile.Views;
 
-public partial class PayOnlineReceipt : ContentPage
+public partial class PayOnsite : ContentPage
 {
     User user = new User();
     private bool buttonClicked = true;
-    public PayOnlineReceipt()
+    public PayOnsite()
     {
         InitializeComponent();
     }
 
-    public PayOnlineReceipt(string roomID, string roomType, double roomRate, string paycode,string creditCard, string email) : this()
+    public PayOnsite(string roomID, string roomType, double roomRate, string paycode) : this()
     {
         roomIDEntry.Text = roomID;
         roomTypeEntry.Text = roomType;
         roomRateEntry.Text = roomRate.ToString();
         txtPayCode.Text = paycode;
-        txtCreditCard.Text = creditCard;
-        txtEmail.Text = email;
     }
 
     private void OnCreditCardEntryTextChanged(object sender, TextChangedEventArgs e)
@@ -45,12 +43,17 @@ public partial class PayOnlineReceipt : ContentPage
                 cleanedText = cleanedText.Substring(0, 19);
             }
 
-            txtCreditCard.Text = cleanedText;
 
         }
     }
     private async void OnbtnProceedPayment(object sender, EventArgs e)
     {
+        if (string.IsNullOrWhiteSpace(txtEmail.Text))
+        {
+            await DisplayAlert("Required Fields", "Please enter the required details for email and credit card.", "OK");
+            return;
+        }
+
         if (buttonClicked)
         {
             buttonClicked = true;
@@ -65,22 +68,48 @@ public partial class PayOnlineReceipt : ContentPage
             {
                 await DisplayAlert("Empty Payment Details", "Please enter the payment details properly.", "OK");
             }
-
             else
             {
                 bool paymentConfirmed = await DisplayAlert("Confirm Payment", $"Viewing Payment Details:\n{paymentDetails}\nContact Details: {email}\n\nProceed with payment?", "Yes", "No");
+
                 if (paymentConfirmed)
                 {
                     await DisplayAlert("Payment Successful", "Payment successful!", "OK");
-
-                        Application.Current.MainPage = new HomePage();
-                    
+                    if (user.UserType == "Admin")
+                    {
+                        //var adminHome = new AdminHome();
+                        //adminHome.CurrentPage = adminHome.Children[3];
+                        //Application.Current.MainPage = adminHome;
+                    }
+                    else
+                    {
+                        Application.Current.MainPage = new PayOnsiteReceipt(roomIDEntry.Text, roomTypeEntry.Text, Convert.ToDouble(roomRateEntry.Text), txtPayCode.Text, txtEmail.Text);
+                    }
                 }
-                
+                else if (user.UserType == "Admin")
+                {
+                    //var adminHome = new AdminHome();
+                    //adminHome.CurrentPage = adminHome.Children[3];
+                    //Application.Current.MainPage = adminHome;
+                }
             }
         }
     }
 
+    private async void OnBtnCancelPayment(object sender, EventArgs e)
+    {
+        await DisplayAlert("Payment Cancelled", "Going back to Home", "OK");
+        //if (user.UserType == "Admin")
+        //{
+        //    var adminHome = new AdminHome();
+        //    adminHome.CurrentPage = adminHome.Children[3];
+        //    Application.Current.MainPage = adminHome;
+        //}
+        //else if (user.UserType == "Client")
+        //{
+        //    Application.Current.MainPage = new ClientHome();
+        //}
+    }
 
     private void OnEmailTextChanged(object sender, TextChangedEventArgs e)
     {

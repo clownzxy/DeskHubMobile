@@ -16,7 +16,8 @@ namespace DeskHubMobile.ViewModels
         public RoomViewModel()
         {
             roomList = new ObservableCollection<Room>();
-            ConvertToRoomList();
+            //ConvertToRoomList();
+            ConvertToRoomListWindows();
         }
 
         public ObservableCollection<Room> RoomList
@@ -68,6 +69,20 @@ namespace DeskHubMobile.ViewModels
 
         public void ConvertToRoomList()
         {
+#if ANDROID
+        var docdocamaw = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDcim);
+            if (File.Exists($"{docdocamaw.AbsoluteFile.Path}/Room.txt"))
+            {
+                string jsonData = File.ReadAllText($"{docdocamaw.AbsoluteFile.Path}/Room.txt");
+                roomList = JsonSerializer.Deserialize<ObservableCollection<Room>>(jsonData);
+            }
+#endif
+        }
+
+        public void ConvertToRoomListWindows()
+        {
+            string maindir = AppDomain.CurrentDomain.BaseDirectory; //change to FileSystem.Current.AppDataDirectory;
+
             if (File.Exists(maindir + fileName))
             {
                 string jsonData = File.ReadAllText(maindir + fileName);

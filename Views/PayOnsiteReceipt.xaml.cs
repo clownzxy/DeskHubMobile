@@ -4,22 +4,21 @@ using System.Text.RegularExpressions;
 
 namespace DeskHubMobile.Views;
 
-public partial class PayOnlineReceipt : ContentPage
+public partial class PayOnsiteReceipt : ContentPage
 {
     User user = new User();
     private bool buttonClicked = true;
-    public PayOnlineReceipt()
+    public PayOnsiteReceipt()
     {
         InitializeComponent();
     }
 
-    public PayOnlineReceipt(string roomID, string roomType, double roomRate, string paycode,string creditCard, string email) : this()
+    public PayOnsiteReceipt(string roomID, string roomType, double roomRate, string paycode, string email) : this()
     {
         roomIDEntry.Text = roomID;
         roomTypeEntry.Text = roomType;
         roomRateEntry.Text = roomRate.ToString();
         txtPayCode.Text = paycode;
-        txtCreditCard.Text = creditCard;
         txtEmail.Text = email;
     }
 
@@ -45,7 +44,6 @@ public partial class PayOnlineReceipt : ContentPage
                 cleanedText = cleanedText.Substring(0, 19);
             }
 
-            txtCreditCard.Text = cleanedText;
 
         }
     }
@@ -73,10 +71,10 @@ public partial class PayOnlineReceipt : ContentPage
                 {
                     await DisplayAlert("Payment Successful", "Payment successful!", "OK");
 
-                        Application.Current.MainPage = new HomePage();
-                    
+                    Application.Current.MainPage = new HomePage();
+
                 }
-                
+
             }
         }
     }
