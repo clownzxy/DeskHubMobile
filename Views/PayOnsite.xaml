@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DeskHubMobile.Views.PayOnsite"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="PayOnsite"
+    BackgroundImageSource="background_new.png">
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout Margin="20,20,20,0" HorizontalOptions="Center">
+            <Label
+                FontAttributes="Bold"
+                FontSize="60"
+                Text="Pay Onsite"
+                TextColor="White" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            Margin="20"
+            HorizontalOptions="Center"
+            Spacing="20">
+            <Frame
+                BackgroundColor="White"
+                HeightRequest="510"
+                WidthRequest="500">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout Margin="5">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="20"
+                            Text="Payment Details"
+                            TextColor="#24936b" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Margin="5,0,5,10">
+                        <Label
+                            FontSize="12"
+                            Text="Summary of selected details:"
+                            TextColor="Black" />
+                    </HorizontalStackLayout>
+                    <BoxView
+                        BackgroundColor="Black"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand" />
+                    <HorizontalStackLayout Margin="5,5,5,0">
+                        <Label
+                            Margin="0,15,80,0"
+                            Text="Room ID:"
+                            TextColor="Black" />
+                        <Border
+                            Margin="5,5,5,5"
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="roomIDEntry"
+                                BackgroundColor="White"
+                                IsReadOnly="True"
+                                TextColor="Black" />
+                        </Border>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Margin="5,0,5,0">
+                        <Label
+                            Margin="0,15,62,0"
+                            Text="Room Type:"
+                            TextColor="Black" />
+                        <Border
+                            Margin="5,5,5,5"
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="roomTypeEntry"
+                                BackgroundColor="White"
+                                IsReadOnly="True"
+                                TextColor="Black" />
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="5,0,5,0">
+                        <Label
+                            Margin="0,15,63,0"
+                            Text="Room Rate:"
+                            TextColor="Black" />
+                        <Border
+                            Margin="5,5,5,5"
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="roomRateEntry"
+                                BackgroundColor="White"
+                                IsReadOnly="True"
+                                TextColor="Black" />
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Margin="5,0,5,0">
+                        <Label
+                            Margin="0,15,74,0"
+                            Text="Pay code:"
+                            TextColor="Black" />
+                        <Border
+                            Margin="5,5,5,5"
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="txtPayCode"
+                                BackgroundColor="White"
+                                IsReadOnly="True"
+                                TextColor="Black" />
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <!--<HorizontalStackLayout Margin="5,0,5,5">
+                        <Label
+                            Margin="0,15,50,0"
+                            Text="Credit Card#:"
+                            TextColor="Black" />
+                        <Border
+                            Margin="5,5,5,5"
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="txtCreditCard"
+                                BackgroundColor="White"
+                                Keyboard="Numeric"
+                                Placeholder="Enter Credit Card Number"
+                                TextChanged="OnCreditCardEntryTextChanged"
+                                TextColor="Black"
+                                ToolTipProperties.Text="Required" />
+                        </Border>
+                    </HorizontalStackLayout>-->
+
+                    <HorizontalStackLayout Margin="7,0,5,0">
+                        <Label
+                            Margin="0,15,100,0"
+                            Text="Email:"
+                            TextColor="Black" />
+                        <Border
+                            Stroke="black"
+                            StrokeShape="RoundRectangle 10,10,10,10"
+                            WidthRequest="300">
+                            <Entry
+                                x:Name="txtEmail"
+                                BackgroundColor="White"
+                                Keyboard="Email"
+                                Placeholder="Enter Email"
+                                TextChanged="OnEmailTextChanged"
+                                TextColor="Black" />
+                        </Border>
+                    </HorizontalStackLayout>
+                    <BoxView
+                        Margin="0,10"
+                        BackgroundColor="Black"
+                        HeightRequest="1"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <HorizontalStackLayout
+                        Margin="0,3"
+                        HorizontalOptions="Center"
+                        Spacing="10">
+                        <Button
+                            x:Name="btnProceedPayment"
+                            BackgroundColor="#24936b"
+                            Clicked="OnbtnProceedPayment"
+                            FontAttributes="Bold"
+                            Text="Proceed Payment"
+                            WidthRequest="200" />
+                        <Button
+                            x:Name="btnCancelPayment"
+                            BackgroundColor="#24936b"
+                            Clicked="OnBtnCancelPayment"
+                            FontAttributes="Bold"
+                            Text="Cancel Payment"
+                            WidthRequest="200" />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+            </Frame>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
