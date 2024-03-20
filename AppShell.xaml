@@ -12,10 +12,7 @@
 
     
 
-    <ShellContent
-    Title="Home"
-    ContentTemplate="{DataTemplate local:MenuPage}"
-    Route="MenuPage" />
+    
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
@@ -29,9 +26,13 @@
         </Tab>
     </TabBar>
 
-    
+    <ShellContent
+Title="Home"
+ContentTemplate="{DataTemplate local:HomePage}"
+Route="HomePage" />
 
 
-        Route="HomePage" />
+
+
 
 </Shell>
