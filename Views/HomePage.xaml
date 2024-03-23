@@ -13,11 +13,11 @@
             Aspect="AspectFill"
             Source="backgroundimagetwo.png" />
 
-        
+
         <ImageButton
-     AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
-     AbsoluteLayout.LayoutFlags="PositionProportional"
-     Source="profileicon.png" />
+            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="profileicon.png" />
 
         <!--  Search Bar  -->
         <Frame
@@ -44,11 +44,11 @@
 
         <!--  Rooms Carousel View  -->
         <Frame
+            Padding="0"
             AbsoluteLayout.LayoutBounds="0.5,0.3,0.9,450"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
             BackgroundColor="Transparent"
-            BorderColor="Black">
-
+            BorderColor="Transparent">
             <ScrollView>
                 <StackLayout>
                     <VerticalStackLayout>
@@ -59,82 +59,83 @@
                             ItemsSource="{Binding RoomList}">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
-                                    <StackLayout>
-                                        
-                                            <Label
-                                                
-                                                Margin="85,10,5,10"
-                                                FontAttributes="Bold"
-                                                FontSize="14"
-                                                HorizontalOptions="Center"
-                                                Text="{Binding RoomID}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Label
-                                                
-                                                Margin="100,10,5,10"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="{Binding RoomName}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Label
-                                                
-                                                Margin="80,10,5,10"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="{Binding Branch}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Label
-                                                
-                                                Margin="55,10,5,10"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="{Binding RoomType}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Label
-                                                
-                                                Margin="75,10,5,10"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="{Binding RoomCapacity}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Label
-                                                
-                                                Margin="60,10,5,10"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="{Binding Rate}"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Button
-                                                
-                                                Margin="0,10,0,10"
-                                                BackgroundColor="#24936b"
-                                                Clicked="ReserveBtnClicked"
-                                                FontAttributes="Bold"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="Reserve"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                            <Button
-                                                
-                                                Margin="0,10,0,10"
-                                                BackgroundColor="#24936b"
-                                                Clicked="RentBtnClicked"
-                                                FontAttributes="Bold"
-                                                FontSize="14"
-                                                HorizontalOptions="Start"
-                                                Text="Rent"
-                                                TextColor="#ECE6E3"
-                                                VerticalOptions="Center" />
-                                        
-                                        
-                                    </StackLayout>
+                                    <Frame
+                                        Margin="8"
+                                        Padding="0"
+                                        BackgroundColor="Transparent"
+                                        BorderColor="Transparent"
+                                        CornerRadius="10">
+                                        <HorizontalStackLayout>
+                                            <StackLayout>
+                                                <Frame
+                                                    Padding="0"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="20"
+                                                    HeightRequest="125">
+                                                    <Image Source="testimage.png" />
+                                                </Frame>
+                                            </StackLayout>
+                                            <StackLayout Margin="5,0,0,0">
+                                                <Frame
+                                                    Padding="0"
+                                                    CornerRadius="20"
+                                                    HeightRequest="135"
+                                                    WidthRequest="135">
+                                                    <StackLayout>
+                                                        <Label
+                                                            Margin="10,5,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="13"
+                                                            Text="Branch:"
+                                                            TextColor="#25936B" />
+                                                        <Label
+                                                            Margin="25,-15,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="12"
+                                                            Text="{Binding Branch}"
+                                                            TextColor="#25936B" />
+                                                        <Label
+                                                            Margin="10,-10,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="13"
+                                                            Text="Room Type:"
+                                                            TextColor="#25936B" />
+                                                        <Label
+                                                            Margin="25,-15,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="12"
+                                                            Text="{Binding RoomType}"
+                                                            TextColor="#25936B" />
+                                                        <Label
+                                                            Margin="10,-10,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="13"
+                                                            Text="Room Name:"
+                                                            TextColor="#25936B" />
+                                                        <Label
+                                                            Margin="25,-15,0,0"
+                                                            FontFamily="myfontbold"
+                                                            FontSize="12"
+                                                            Text="{Binding RoomName}"
+                                                            TextColor="#25936B" />
+
+
+                                                    </StackLayout>
+                                                </Frame>
+                                                <Button
+                                                    Margin="0,5,0,0"
+                                                    Padding="0,-8,0,0"
+                                                    BackgroundColor="#25936B"
+                                                    Clicked="OnBookButtonClicked"
+                                                    CornerRadius="20"
+                                                    FontFamily="myfontbold"
+                                                    FontSize="20"
+                                                    HeightRequest="30"
+                                                    Text="Book"
+                                                    WidthRequest="100" />
+                                            </StackLayout>
+                                        </HorizontalStackLayout>
+                                    </Frame>
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
@@ -142,8 +143,6 @@
 
                 </StackLayout>
             </ScrollView>
-
-
         </Frame>
 
         <!--  Time In and Time Out  -->
@@ -177,7 +176,7 @@
                                 FontSize="20"
                                 TextColor="#25936B"
                                 Time="1:00:26" />
-                        
+
                         </Frame>
                     </VerticalStackLayout>
                     <VerticalStackLayout Margin="45,0,0,0">
@@ -202,37 +201,32 @@
                                 FontSize="20"
                                 TextColor="#25936B"
                                 Time="1:00:26" />
-                        
+
                         </Frame>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
 
-                
 
-                <Button x:Name="checkAvailabilityButton"
-                        Margin="0,20,0,0"
-                        Padding="0,0,0,0"
-                        Clicked="OnbtnCheckAvailability_Clicked"
-                        BackgroundColor="#25936B"
-                        CornerRadius="20"
-                        FontAttributes="Bold"
-                        FontFamily="myfontbold"
-                        Text="Check Room Availability"
-                        WidthRequest="250">
+
+                <Button
+                    x:Name="checkAvailabilityButton"
+                    Margin="0,20,0,0"
+                    Padding="0,0,0,0"
+                    BackgroundColor="#25936B"
+                    Clicked="OnbtnCheckAvailability_Clicked"
+                    CornerRadius="20"
+                    FontAttributes="Bold"
+                    FontFamily="myfontbold"
+                    Text="Check Room Availability"
+                    WidthRequest="250">
                     <Button.Triggers>
-                        <Trigger TargetType="Button"
-                        Property="IsPressed"
-                        Value="True">
-                            <Setter Property="BackgroundColor"
-                                    Value="#207755" />
-                        
+                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                            <Setter Property="BackgroundColor" Value="#207755" />
+
                         </Trigger>
-                        <Trigger TargetType="Button"
-                            Property="IsPressed"
-                            Value="False">
-                            <Setter Property="BackgroundColor"
-                            Value="#25936B" />
-                          
+                        <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                            <Setter Property="BackgroundColor" Value="#25936B" />
+
                         </Trigger>
                     </Button.Triggers>
                 </Button>

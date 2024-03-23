@@ -10,10 +10,10 @@ public partial class HomePage : ContentPage
     RoomViewModel roomViewModel = new RoomViewModel();
 
     public HomePage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         this.Title = "DeskHub";
-	}
+    }
 
     public HomePage(User user)
     {
@@ -74,7 +74,7 @@ public partial class HomePage : ContentPage
 
         //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
     }
-    
+
     private void RentBtnClicked(object sender, EventArgs e)
     {
         var button = (Button)sender;
@@ -83,7 +83,7 @@ public partial class HomePage : ContentPage
         string paycode = GeneratePayCode();
         //Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode);
 
-        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
+        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode));
     }
 
     public string GeneratePayCode()
@@ -99,6 +99,54 @@ public partial class HomePage : ContentPage
         }
         return "PAY" + paycode.ToString();
     }
+
+    private async void OnBookButtonClicked(object sender, EventArgs e)
+    {
+        // Create the frame with buttons
+        Frame reservationFrame = new Frame
+        {
+            BackgroundColor = Color.FromRgba(255, 255, 255, 200), // Set the alpha value to 200 for semi-transparency
+            Padding = 10,
+            CornerRadius = 10,
+            WidthRequest = 300,
+            HeightRequest = 150,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.End,
+            TranslationY = 300, // Start it off the screen
+            Content = new StackLayout
+            {
+                Children = {
+                new Button {
+                    Text = "Reserve",
+                    BackgroundColor = Color.FromRgb(37, 147, 107),
+                    TextColor = Color.FromRgb(0, 0, 0),
+                    CornerRadius = 10,
+                    Margin = new Thickness(0, 0, 0, 10)
+                },
+                new Button {
+                    Text = "Book Now",
+                    BackgroundColor = Color.FromRgb(37, 147, 107),
+                    TextColor =  Color.FromRgb(0, 0, 0),
+                    CornerRadius = 10
+                }
+            }
+            }
+        };
+
+        // Add the frame to the page
+        Content = new AbsoluteLayout
+        {
+            BackgroundColor = Color.FromRgba(0, 0, 0, 150), // Set the alpha value to 150 for semi-transparency
+            Children = {
+            reservationFrame
+        }
+        };
+
+        // Slide the frame into view with animation
+        await reservationFrame.TranslateTo(0, 0, 250, Easing.SinInOut);
+    }
+
+
 
 
 }

@@ -16,8 +16,8 @@ namespace DeskHubMobile.ViewModels
         public RoomViewModel()
         {
             roomList = new ObservableCollection<Room>();
-            //ConvertToRoomList();
-            ConvertToRoomListWindows();
+            ConvertToRoomList();
+            //ConvertToRoomListWindows();
         }
 
         public ObservableCollection<Room> RoomList
