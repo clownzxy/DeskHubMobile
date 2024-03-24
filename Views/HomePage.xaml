@@ -126,13 +126,25 @@
                                                     Margin="0,5,0,0"
                                                     Padding="0,-8,0,0"
                                                     BackgroundColor="#25936B"
-                                                    Clicked="OnBookButtonClicked"
                                                     CornerRadius="20"
                                                     FontFamily="myfontbold"
                                                     FontSize="20"
                                                     HeightRequest="30"
                                                     Text="Book"
-                                                    WidthRequest="100" />
+                                                    WidthRequest="100"
+                                                    Clicked="Button_Clicked">
+
+                                                    <Button.Triggers>
+                                                        <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                                            <Setter Property="BackgroundColor" Value="#207755" />
+
+                                                        </Trigger>
+                                                        <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                                            <Setter Property="BackgroundColor" Value="#25936B" />
+
+                                                        </Trigger>
+                                                    </Button.Triggers>
+                                                </Button>
                                             </StackLayout>
                                         </HorizontalStackLayout>
                                     </Frame>
@@ -218,6 +230,7 @@
                     FontAttributes="Bold"
                     FontFamily="myfontbold"
                     Text="Check Room Availability"
+                    FontSize="15"
                     WidthRequest="250">
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
@@ -241,5 +254,9 @@
 
         </Frame>
 
+        
+
     </AbsoluteLayout>
+    
+    
 </ContentPage>

@@ -100,50 +100,23 @@ public partial class HomePage : ContentPage
         return "PAY" + paycode.ToString();
     }
 
-    private async void OnBookButtonClicked(object sender, EventArgs e)
+    //////////////////
+
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-        // Create the frame with buttons
-        Frame reservationFrame = new Frame
-        {
-            BackgroundColor = Color.FromRgba(255, 255, 255, 200), // Set the alpha value to 200 for semi-transparency
-            Padding = 10,
-            CornerRadius = 10,
-            WidthRequest = 300,
-            HeightRequest = 150,
-            HorizontalOptions = LayoutOptions.Center,
-            VerticalOptions = LayoutOptions.End,
-            TranslationY = 300, // Start it off the screen
-            Content = new StackLayout
-            {
-                Children = {
-                new Button {
-                    Text = "Reserve",
-                    BackgroundColor = Color.FromRgb(37, 147, 107),
-                    TextColor = Color.FromRgb(0, 0, 0),
-                    CornerRadius = 10,
-                    Margin = new Thickness(0, 0, 0, 10)
-                },
-                new Button {
-                    Text = "Book Now",
-                    BackgroundColor = Color.FromRgb(37, 147, 107),
-                    TextColor =  Color.FromRgb(0, 0, 0),
-                    CornerRadius = 10
-                }
-            }
-            }
-        };
+        string action = await DisplayActionSheet("Choose Action", "Cancel", null, "Reserve", "Book Now");
 
-        // Add the frame to the page
-        Content = new AbsoluteLayout
+        // Check the chosen action
+        if (action == "Reserve")
         {
-            BackgroundColor = Color.FromRgba(0, 0, 0, 150), // Set the alpha value to 150 for semi-transparency
-            Children = {
-            reservationFrame
+            // Handle reserve action
+            await DisplayAlert("Reservation", "Your reservation has been placed.", "OK");
         }
-        };
-
-        // Slide the frame into view with animation
-        await reservationFrame.TranslateTo(0, 0, 250, Easing.SinInOut);
+        else if (action == "Book Now")
+        {
+            // Handle book now action
+            await DisplayAlert("Booking", "Your booking has been confirmed.", "OK");
+        }
     }
 
 
