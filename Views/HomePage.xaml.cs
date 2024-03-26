@@ -10,10 +10,10 @@ public partial class HomePage : ContentPage
     RoomViewModel roomViewModel = new RoomViewModel();
 
     public HomePage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         this.Title = "DeskHub";
-	}
+    }
 
     public HomePage(User user)
     {
@@ -74,7 +74,7 @@ public partial class HomePage : ContentPage
 
         //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
     }
-    
+
     private void RentBtnClicked(object sender, EventArgs e)
     {
         var button = (Button)sender;
@@ -83,7 +83,7 @@ public partial class HomePage : ContentPage
         string paycode = GeneratePayCode();
         //Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode);
 
-        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
+        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode));
     }
 
     public string GeneratePayCode()
@@ -99,6 +99,27 @@ public partial class HomePage : ContentPage
         }
         return "PAY" + paycode.ToString();
     }
+
+    //////////////////
+
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        string action = await DisplayActionSheet("Choose Action", "Cancel", null, "Reserve", "Book Now");
+
+        // Check the chosen action
+        if (action == "Reserve")
+        {
+            // Handle reserve action
+            await DisplayAlert("Reservation", "Your reservation has been placed.", "OK");
+        }
+        else if (action == "Book Now")
+        {
+            // Handle book now action
+            await DisplayAlert("Booking", "Your booking has been confirmed.", "OK");
+        }
+    }
+
+
 
 
 }
