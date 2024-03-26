@@ -76,7 +76,9 @@
                                                 BorderColor="Black"
                                                 CornerRadius="10"
                                                 HeightRequest="35"
-                                                WidthRequest="170" />
+                                                WidthRequest="170">
+                                                <Label Text="Room ID here" Margin="10,27,0,0"/>
+                                            </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
                                             <Label
@@ -89,7 +91,9 @@
                                                 BorderColor="Black"
                                                 CornerRadius="10"
                                                 HeightRequest="35"
-                                                WidthRequest="169" />
+                                                WidthRequest="169">
+                                                <Entry Margin="10,15,0,0" Text="18" />
+                                            </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
                                             <Label
@@ -102,7 +106,9 @@
                                                 BorderColor="Black"
                                                 CornerRadius="10"
                                                 HeightRequest="35"
-                                                WidthRequest="170" />
+                                                WidthRequest="170">
+                                                <Entry Margin="10,15,0,0" Text="18" />
+                                            </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
                                             <Label
@@ -115,9 +121,11 @@
                                                 BorderColor="Black"
                                                 CornerRadius="10"
                                                 HeightRequest="35"
-                                                WidthRequest="170" />
+                                                WidthRequest="170">
+                                                <Entry Margin="10,15,0,0" Text="18" />
+                                            </Frame>
                                         </HorizontalStackLayout>
-                                        <!-- -->
+
                                         <HorizontalStackLayout
                                             Margin="30,15,0,0"
                                             HorizontalOptions="Center"

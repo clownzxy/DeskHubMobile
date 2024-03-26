@@ -13,8 +13,8 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:PayOnsite}"
-        Route="PayOnsite" />
+        ContentTemplate="{DataTemplate local:PayOnlineReceipt}"
+        Route="PayOnlineReceipt" />
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">

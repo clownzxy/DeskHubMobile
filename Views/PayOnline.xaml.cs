@@ -13,40 +13,40 @@ public partial class PayOnline : ContentPage
         InitializeComponent();
     }
 
-    public PayOnline(string roomID, string roomType, double roomRate, string paycode) : this()
-    {
-        roomIDEntry.Text = roomID;
-        roomTypeEntry.Text = roomType;
-        roomRateEntry.Text = roomRate.ToString();
-        txtPayCode.Text = paycode;
-    }
+    //public PayOnline(string roomID, string roomType, double roomRate, string paycode) : this()
+    //{
+    //    roomIDEntry.Text = roomID;
+    //    roomTypeEntry.Text = roomType;
+    //    roomRateEntry.Text = roomRate.ToString();
+    //    txtPayCode.Text = paycode;
+    //}
 
-    private void OnCreditCardEntryTextChanged(object sender, TextChangedEventArgs e)
-    {
-        if (!string.IsNullOrWhiteSpace(e.NewTextValue))
-        {
-            string cleanedText = new string(e.NewTextValue.Where(char.IsDigit).ToArray());
-            if (cleanedText.Length > 4)
-            {
-                cleanedText = cleanedText.Insert(4, "-");
-            }
-            if (cleanedText.Length > 9)
-            {
-                cleanedText = cleanedText.Insert(9, "-");
-            }
-            if (cleanedText.Length > 14)
-            {
-                cleanedText = cleanedText.Insert(14, "-");
-            }
-            if (cleanedText.Length > 19)
-            {
-                cleanedText = cleanedText.Substring(0, 19);
-            }
+    //private void OnCreditCardEntryTextChanged(object sender, TextChangedEventArgs e)
+    //{
+    //    if (!string.IsNullOrWhiteSpace(e.NewTextValue))
+    //    {
+    //        string cleanedText = new string(e.NewTextValue.Where(char.IsDigit).ToArray());
+    //        if (cleanedText.Length > 4)
+    //        {
+    //            cleanedText = cleanedText.Insert(4, "-");
+    //        }
+    //        if (cleanedText.Length > 9)
+    //        {
+    //            cleanedText = cleanedText.Insert(9, "-");
+    //        }
+    //        if (cleanedText.Length > 14)
+    //        {
+    //            cleanedText = cleanedText.Insert(14, "-");
+    //        }
+    //        if (cleanedText.Length > 19)
+    //        {
+    //            cleanedText = cleanedText.Substring(0, 19);
+    //        }
 
-            txtCreditCard.Text = cleanedText;
+    //        txtCreditCard.Text = cleanedText;
 
-        }
-    }
+    //    }
+    //}
     //private async void OnbtnProceedPayment(object sender, EventArgs e)
     //{
     //    if (string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtCreditCard.Text))
@@ -112,19 +112,19 @@ public partial class PayOnline : ContentPage
         //}
     }
 
-    private void OnEmailTextChanged(object sender, TextChangedEventArgs e)
-    {
-        string email = e.NewTextValue;
-        bool isValid = IsEmailValid(email);
-        if (!isValid)
-        {
-            txtEmail.TextColor = Colors.Red;
-        }
-        else
-        {
-            txtEmail.TextColor = Colors.Black;
-        }
-    }
+    //private void OnEmailTextChanged(object sender, TextChangedEventArgs e)
+    //{
+    //    string email = e.NewTextValue;
+    //    bool isValid = IsEmailValid(email);
+    //    if (!isValid)
+    //    {
+    //        txtEmail.TextColor = Colors.Red;
+    //    }
+    //    else
+    //    {
+    //        txtEmail.TextColor = Colors.Black;
+    //    }
+    //}
     private bool IsEmailValid(string email)
     {
         string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";

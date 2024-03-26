@@ -24,7 +24,7 @@
                         Margin="0,10,5,0"
                         Padding="0"
                         BackgroundColor="#25936B"
-                        Clicked="PayOnlineBtnClicked"
+                       
                         CornerRadius="20"
                         FontFamily="myfontbold"
                         HeightRequest="50"
