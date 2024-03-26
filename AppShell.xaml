@@ -10,9 +10,9 @@
     Shell.TabBarForegroundColor="#25936B"
     Shell.TabBarTitleColor="#25936B">
 
-    
 
-    
+
+
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
@@ -26,11 +26,11 @@
         </Tab>
     </TabBar>
 
-    <ShellContent
-Title="Home"
-ContentTemplate="{DataTemplate local:HomePage}"
-Route="HomePage" />
 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:SignUpPage}"
+        Route="SignUpPage" />
 
 
 
