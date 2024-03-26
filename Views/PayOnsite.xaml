@@ -117,7 +117,7 @@
                                                 HeightRequest="35"
                                                 WidthRequest="170" />
                                         </HorizontalStackLayout>
-
+                                        <!-- -->
                                         <HorizontalStackLayout
                                             Margin="30,15,0,0"
                                             HorizontalOptions="Center"
