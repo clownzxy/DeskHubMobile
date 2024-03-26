@@ -47,7 +47,7 @@
                     BackgroundColor="Transparent"
                     FontAttributes="Bold"
                     FontSize="20"
-                    Placeholder="Email"
+                    Placeholder="Username"
                     PlaceholderColor="#49A686"
                     TextColor="#25936B" />
 
@@ -65,22 +65,37 @@
         </Frame>
 
 
-
-        <!--<Frame
-            AbsoluteLayout.LayoutBounds="0.5,0.9,0.76,90"
+        <Frame
+            Padding="0"
+            AbsoluteLayout.LayoutBounds="0.5,0.87,0,50"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
-            BackgroundColor="Transparent"
-            BorderColor="Transparent">-->
-
+            HasShadow="True"
+            WidthRequest="260">
             <Button
                 BackgroundColor="#25936B"
+                Clicked="OnClickedBtnLogin"
                 FontAttributes="Bold"
                 FontSize="22"
                 Text="Login"
-                Clicked="OnClickedBtnLogin"
-                TextColor="#FFFFFF" />
+                TextColor="#FFFFFF">
 
-        <!--</Frame>-->
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="BackgroundColor" Value="#207755" />
+
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                        <Setter Property="BackgroundColor" Value="#25936B" />
+
+                    </Trigger>
+                </Button.Triggers>
+
+            </Button>
+
+        </Frame>
+
+
+
 
         <Frame
             AbsoluteLayout.LayoutBounds="0.5,0.93,0.76,90"

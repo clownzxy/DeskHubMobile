@@ -232,6 +232,7 @@
                     Text="Check Room Availability"
                     FontSize="15"
                     WidthRequest="250">
+                    
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
                             <Setter Property="BackgroundColor" Value="#207755" />

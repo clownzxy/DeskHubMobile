@@ -37,10 +37,24 @@
             BorderColor="Transparent">
             <Button
                 BackgroundColor="#25936B"
+                Clicked="OnClickedBtnLogin"
                 FontSize="22"
                 Text="Login"
-                Clicked="OnClickedBtnLogin"
-                TextColor="#FFFFFF" />
+                TextColor="#FFFFFF">
+
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="BackgroundColor" Value="#207755" />
+
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                        <Setter Property="BackgroundColor" Value="#25936B" />
+
+                    </Trigger>
+                </Button.Triggers>
+
+            </Button>
+
         </Frame>
 
         <!--  Button SignUp  -->
@@ -51,11 +65,23 @@
             BorderColor="Transparent">
             <Button
                 BackgroundColor="#FFFFFF"
-                FontAttributes="Bold"
                 Clicked="OnClickedBtnSignUp"
+                FontAttributes="Bold"
                 FontSize="22"
                 Text="Sign Up"
-                TextColor="#25936B" />
+                TextColor="#25936B">
+
+                <Button.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="BackgroundColor" Value="#A09D9D" />
+
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                        <Setter Property="BackgroundColor" Value="#FFFFFF" />
+
+                    </Trigger>
+                </Button.Triggers>
+            </Button>
         </Frame>
     </AbsoluteLayout>
 

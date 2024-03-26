@@ -181,6 +181,7 @@
             Text="Reserved Room"
             TextColor="White" />
 
+        
         <Frame
             AbsoluteLayout.LayoutBounds="0.5,0.94,.9,190"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
