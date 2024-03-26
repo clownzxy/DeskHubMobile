@@ -132,7 +132,7 @@
                                                     HeightRequest="30"
                                                     Text="Book"
                                                     WidthRequest="100"
-                                                    Clicked="Button_Clicked">
+                                                    Clicked="RentBtnClicked">
 
                                                     <Button.Triggers>
                                                         <Trigger TargetType="Button" Property="IsPressed" Value="True">

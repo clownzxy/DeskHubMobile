@@ -42,6 +42,8 @@ public partial class BookingTypePopUp : Popup
 
         string paycode = GeneratePayCode();
         await CloseAsync();
+        //await Navigation.PushAsync(new SignUpPage());
+
         Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
     }
 
