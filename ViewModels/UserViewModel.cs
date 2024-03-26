@@ -42,7 +42,7 @@ namespace DeskHubMobile.ViewModels
             var docdocamaw = Android.App.Application.Context.GetExternalFilesDir(Android.OS.Environment.DirectoryDownloads);
             //var docdocamaw = Android.App.Application.Context.
 
-            File.WriteAllText($"{docdocamaw.AbsoluteFile.Path}/users.txt", json);
+            File.WriteAllText($"{docdocamaw.AbsoluteFile.Path}/Users.txt", json);
 #endif
         }
 
