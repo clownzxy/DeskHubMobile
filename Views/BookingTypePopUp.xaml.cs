@@ -50,14 +50,14 @@ public partial class BookingTypePopUp : Popup
 
 
 
-    private async void PayOnsiteBtnClicked(object sender, EventArgs e)
-    {
+    //private async void PayOnsiteBtnClicked(object sender, EventArgs e)
+    //{
 
 
-        string paycode = GeneratePayCode();
-        await CloseAsync();
-        Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
-    }
+    //    string paycode = GeneratePayCode();
+    //    await CloseAsync();
+    //    Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
+    //}
 
     public string GeneratePayCode()
     {

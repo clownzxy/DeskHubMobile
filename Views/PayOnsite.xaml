@@ -3,184 +3,177 @@
     x:Class="DeskHubMobile.Views.PayOnsite"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="PayOnsite"
-    BackgroundImageSource="background_new.png">
+    Title="PayOnsite">
 
-    <VerticalStackLayout>
-        <HorizontalStackLayout Margin="20,20,20,0" HorizontalOptions="Center">
-            <Label
-                FontAttributes="Bold"
-                FontSize="60"
-                Text="Pay Onsite"
-                TextColor="White" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout
-            Margin="20"
-            HorizontalOptions="Center"
-            Spacing="20">
-            <Frame
-                BackgroundColor="White"
-                HeightRequest="510"
-                WidthRequest="500">
+    <AbsoluteLayout>
+
+        <!--  BackgroundImage  -->
+        <Image
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            Aspect="AspectFill"
+            Source="backgroundimagetwo.png" />
+
+        <ImageButton
+            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="profileicon.png" />
+
+
+        <!--  Label Button  -->
+
+        <Frame
+            Padding="0"
+            AbsoluteLayout.LayoutBounds="0.5,0.59,0.9,600"
+            AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
+            BackgroundColor="Transparent"
+            BorderColor="Transparent">
+
+            <HorizontalStackLayout HorizontalOptions="Center">
                 <VerticalStackLayout>
-                    <HorizontalStackLayout Margin="5">
-                        <Label
-                            FontAttributes="Bold"
-                            FontSize="20"
-                            Text="Payment Details"
-                            TextColor="#24936b" />
-                    </HorizontalStackLayout>
-                    <HorizontalStackLayout Margin="5,0,5,10">
-                        <Label
-                            FontSize="12"
-                            Text="Summary of selected details:"
-                            TextColor="Black" />
-                    </HorizontalStackLayout>
-                    <BoxView
-                        BackgroundColor="Black"
-                        HeightRequest="1"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="CenterAndExpand" />
-                    <HorizontalStackLayout Margin="5,5,5,0">
-                        <Label
-                            Margin="0,15,80,0"
-                            Text="Room ID:"
-                            TextColor="Black" />
-                        <Border
-                            Margin="5,5,5,5"
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="roomIDEntry"
-                                BackgroundColor="White"
-                                IsReadOnly="True"
-                                TextColor="Black" />
-                        </Border>
-                    </HorizontalStackLayout>
-                    <HorizontalStackLayout Margin="5,0,5,0">
-                        <Label
-                            Margin="0,15,62,0"
-                            Text="Room Type:"
-                            TextColor="Black" />
-                        <Border
-                            Margin="5,5,5,5"
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="roomTypeEntry"
-                                BackgroundColor="White"
-                                IsReadOnly="True"
-                                TextColor="Black" />
-                        </Border>
-                    </HorizontalStackLayout>
+                    <Label
+                        Margin="50,-20,0,0"
+                        FontFamily="myfontbold"
+                        FontSize="40"
+                        Text="Pay Onsite"
+                        TextColor="White" />
 
-                    <HorizontalStackLayout Margin="5,0,5,0">
-                        <Label
-                            Margin="0,15,63,0"
-                            Text="Room Rate:"
-                            TextColor="Black" />
-                        <Border
-                            Margin="5,5,5,5"
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="roomRateEntry"
-                                BackgroundColor="White"
-                                IsReadOnly="True"
-                                TextColor="Black" />
-                        </Border>
-                    </HorizontalStackLayout>
+                    <Frame
+                        Padding="10"
+                        CornerRadius="20"
+                        HeightRequest="350"
+                        WidthRequest="300">
 
-                    <HorizontalStackLayout Margin="5,0,5,0">
-                        <Label
-                            Margin="0,15,74,0"
-                            Text="Pay code:"
-                            TextColor="Black" />
-                        <Border
-                            Margin="5,5,5,5"
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="txtPayCode"
-                                BackgroundColor="White"
-                                IsReadOnly="True"
-                                TextColor="Black" />
-                        </Border>
-                    </HorizontalStackLayout>
+                        <HorizontalStackLayout>
+                            <StackLayout>
+                                <Label
+                                    Margin="0,-10,0,0"
+                                    FontFamily="myfontbold"
+                                    FontSize="20"
+                                    Text="Payment Details"
+                                    TextColor="#25936B" />
 
-                    <!--<HorizontalStackLayout Margin="5,0,5,5">
-                        <Label
-                            Margin="0,15,50,0"
-                            Text="Credit Card#:"
-                            TextColor="Black" />
-                        <Border
-                            Margin="5,5,5,5"
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="txtCreditCard"
-                                BackgroundColor="White"
-                                Keyboard="Numeric"
-                                Placeholder="Enter Credit Card Number"
-                                TextChanged="OnCreditCardEntryTextChanged"
-                                TextColor="Black"
-                                ToolTipProperties.Text="Required" />
-                        </Border>
-                    </HorizontalStackLayout>-->
+                                <Label
+                                    Margin="2,-16,0,0"
+                                    FontFamily="myfontbold"
+                                    Text="Summary" />
 
-                    <HorizontalStackLayout Margin="7,0,5,0">
-                        <Label
-                            Margin="0,15,100,0"
-                            Text="Email:"
-                            TextColor="Black" />
-                        <Border
-                            Stroke="black"
-                            StrokeShape="RoundRectangle 10,10,10,10"
-                            WidthRequest="300">
-                            <Entry
-                                x:Name="txtEmail"
-                                BackgroundColor="White"
-                                Keyboard="Email"
-                                Placeholder="Enter Email"
-                                TextChanged="OnEmailTextChanged"
-                                TextColor="Black" />
-                        </Border>
-                    </HorizontalStackLayout>
-                    <BoxView
-                        Margin="0,10"
-                        BackgroundColor="Black"
-                        HeightRequest="1"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="CenterAndExpand" />
+                                <BoxView
+                                    HeightRequest="1"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="280" />
+                                <HorizontalStackLayout>
+                                    <StackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label
+                                                Margin="2,10,0,0"
+                                                FontFamily="myfontbold"
+                                                Text="Room ID: " />
+                                            <Frame
+                                                Margin="18,10,0,0"
+                                                Padding="0,-20,0,-7"
+                                                BorderColor="Black"
+                                                CornerRadius="10"
+                                                HeightRequest="35"
+                                                WidthRequest="170" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label
+                                                Margin="2,10,0,0"
+                                                FontFamily="myfontbold"
+                                                Text="Room Type: " />
+                                            <Frame
+                                                Margin="2,10,0,0"
+                                                Padding="0,-20,0,-7"
+                                                BorderColor="Black"
+                                                CornerRadius="10"
+                                                HeightRequest="35"
+                                                WidthRequest="169" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label
+                                                Margin="2,10,0,0"
+                                                FontFamily="myfontbold"
+                                                Text="Room Rate: " />
+                                            <Frame
+                                                Margin="3,10,0,0"
+                                                Padding="0,-20,0,-7"
+                                                BorderColor="Black"
+                                                CornerRadius="10"
+                                                HeightRequest="35"
+                                                WidthRequest="170" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout>
+                                            <Label
+                                                Margin="2,10,0,0"
+                                                FontFamily="myfontbold"
+                                                Text="Email: " />
+                                            <Frame
+                                                Margin="41,10,0,0"
+                                                Padding="0,-20,0,-7"
+                                                BorderColor="Black"
+                                                CornerRadius="10"
+                                                HeightRequest="35"
+                                                WidthRequest="170" />
+                                        </HorizontalStackLayout>
 
-                    <HorizontalStackLayout
-                        Margin="0,3"
-                        HorizontalOptions="Center"
-                        Spacing="10">
-                        <Button
-                            x:Name="btnProceedPayment"
-                            BackgroundColor="#24936b"
-                            Clicked="OnbtnProceedPayment"
-                            FontAttributes="Bold"
-                            Text="Proceed Payment"
-                            WidthRequest="200" />
-                        <Button
-                            x:Name="btnCancelPayment"
-                            BackgroundColor="#24936b"
-                            Clicked="OnBtnCancelPayment"
-                            FontAttributes="Bold"
-                            Text="Cancel Payment"
-                            WidthRequest="200" />
-                    </HorizontalStackLayout>
+                                        <HorizontalStackLayout
+                                            Margin="30,15,0,0"
+                                            HorizontalOptions="Center"
+                                            Spacing="10">
+                                            <Button
+                                                BackgroundColor="#25936B"
+                                                CornerRadius="18"
+                                                Text="Continue"
+                                                WidthRequest="100">
+
+                                                <Button.Triggers>
+                                                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                                        <Setter Property="BackgroundColor" Value="#207755" />
+
+                                                    </Trigger>
+                                                    <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                                        <Setter Property="BackgroundColor" Value="#25936B" />
+
+                                                    </Trigger>
+                                                </Button.Triggers>
+
+                                            </Button>
+                                            <Button
+                                                BackgroundColor="#878181"
+                                                CornerRadius="18"
+                                                Text="Cancel"
+                                                WidthRequest="100">
+
+                                                <Button.Triggers>
+                                                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                                        <Setter Property="BackgroundColor" Value="#4C4848" />
+
+                                                    </Trigger>
+                                                    <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                                        <Setter Property="BackgroundColor" Value="#878181" />
+
+                                                    </Trigger>
+                                                </Button.Triggers>
+                                            </Button>
+                                        </HorizontalStackLayout>
+
+                                    </StackLayout>
+                                </HorizontalStackLayout>
+
+                            </StackLayout>
+
+                        </HorizontalStackLayout>
+                    </Frame>
+
+
 
                 </VerticalStackLayout>
-            </Frame>
-        </HorizontalStackLayout>
-    </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </Frame>
+
+
+    </AbsoluteLayout>
 
 </ContentPage>

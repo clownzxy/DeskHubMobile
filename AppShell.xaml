@@ -11,6 +11,11 @@
     Shell.TabBarTitleColor="#25936B">
 
 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:PayOnsite}"
+        Route="PayOnsite" />
+
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
             <ShellContent ContentTemplate="{DataTemplate local:InfoPage}" Route="InfoPage" />
@@ -24,10 +29,7 @@
     </TabBar>
 
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPageTwo}"
-        Route="LoginPageTwo" />
+
 
 
 

@@ -31,11 +31,12 @@
                         Text="Pay Online"
                         WidthRequest="100" />
 
+                    
                     <Button
                         Margin="5,10,0,0"
                         Padding="0"
                         BackgroundColor="#25936B"
-                        Clicked="PayOnsiteBtnClicked"
+                       
                         CornerRadius="20"
                         FontFamily="myfontbold"
                         HeightRequest="50"

@@ -165,7 +165,7 @@
                         <Button
                             x:Name="btnProceedPayment"
                             BackgroundColor="#24936b"
-                            Clicked="OnbtnProceedPayment"
+                            
                             FontAttributes="Bold"
                             Text="Proceed Payment"
                             WidthRequest="200" />
