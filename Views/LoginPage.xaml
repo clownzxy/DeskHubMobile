@@ -39,6 +39,7 @@
                 BackgroundColor="#25936B"
                 FontSize="22"
                 Text="Login"
+                Clicked="OnClickedBtnLogin"
                 TextColor="#FFFFFF" />
         </Frame>
 
@@ -51,6 +52,7 @@
             <Button
                 BackgroundColor="#FFFFFF"
                 FontAttributes="Bold"
+                Clicked="OnClickedBtnSignUp"
                 FontSize="22"
                 Text="Sign Up"
                 TextColor="#25936B" />

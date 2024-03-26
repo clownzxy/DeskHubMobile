@@ -42,6 +42,7 @@
             <StackLayout>
 
                 <Entry
+                    x:Name="txtusernameEntry"
                     Margin="10"
                     BackgroundColor="Transparent"
                     FontAttributes="Bold"
@@ -51,6 +52,7 @@
                     TextColor="#25936B" />
 
                 <Entry
+                    x:Name="txtpasswordEntry"
                     Margin="10"
                     BackgroundColor="Transparent"
                     FontAttributes="Bold"
@@ -64,22 +66,21 @@
 
 
 
-        <Frame
+        <!--<Frame
             AbsoluteLayout.LayoutBounds="0.5,0.9,0.76,90"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
             BackgroundColor="Transparent"
-            BorderColor="Transparent"
-            HasShadow="True"
-            >
+            BorderColor="Transparent">-->
 
             <Button
                 BackgroundColor="#25936B"
                 FontAttributes="Bold"
                 FontSize="22"
                 Text="Login"
+                Clicked="OnClickedBtnLogin"
                 TextColor="#FFFFFF" />
 
-        </Frame>
+        <!--</Frame>-->
 
         <Frame
             AbsoluteLayout.LayoutBounds="0.5,0.93,0.76,90"
@@ -91,6 +92,7 @@
                 <Button
                     BackgroundColor="Transparent"
                     BorderColor="Transparent"
+                    Clicked="OnbtnSignUpClicked"
                     Text="New User? Register Now" />
             </StackLayout>
         </Frame>

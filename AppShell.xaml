@@ -28,9 +28,9 @@
 
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:SignUpPage}"
-        Route="SignUpPage" />
+Title="Home"
+ContentTemplate="{DataTemplate local:LoginPage}"
+Route="LoginPage" />
 
 
 
