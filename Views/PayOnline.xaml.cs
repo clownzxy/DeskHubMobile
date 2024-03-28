@@ -12,7 +12,7 @@ public partial class PayOnline : ContentPage
     {
         InitializeComponent();
     }
-
+    //
     //public PayOnline(string roomID, string roomType, double roomRate, string paycode) : this()
     //{
     //    roomIDEntry.Text = roomID;
