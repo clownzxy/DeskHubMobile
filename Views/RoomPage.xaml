@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="RoomPage">
-    
+
     <AbsoluteLayout>
 
         <!--  BackgroundImage  -->
@@ -15,9 +15,9 @@
             Source="backgroundimagetwo.png" />
 
         <ImageButton
-     AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
-     AbsoluteLayout.LayoutFlags="PositionProportional"
-     Source="profileicon.png" />
+            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="profileicon.png" />
 
 
         <!--  Logo Button  -->
@@ -56,8 +56,8 @@
                         Text="Room Type:" />
 
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="Room"
                         TextColor="#595353" />
@@ -69,8 +69,8 @@
                         FontSize="17"
                         Text="Time In:" />
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="00:00"
                         TextColor="#595353" />
@@ -81,8 +81,8 @@
                         FontSize="17"
                         Text="Time In:" />
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="00:00"
                         TextColor="#595353" />
@@ -103,23 +103,17 @@
                             Padding="0,0,0,0"
                             BackgroundColor="#25936B"
                             CornerRadius="20"
-                            FontFamily="myfonts"
+                            FontFamily="myfontbold"
                             HeightRequest="30"
                             Text="Snacks/Drinks"
                             WidthRequest="130">
                             <Button.Triggers>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                         Value="True">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#207755" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                    <Setter Property="BackgroundColor" Value="#207755" />
 
                                 </Trigger>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                         Value="False">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#25936B" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                    <Setter Property="BackgroundColor" Value="#25936B" />
 
                                 </Trigger>
                             </Button.Triggers>
@@ -130,24 +124,18 @@
                             Padding="0,0,0,0"
                             BackgroundColor="#25936B"
                             CornerRadius="20"
-                            FontFamily="myfonts"
+                            FontFamily="myfontbold"
                             HeightRequest="30"
                             Text="Time Duration"
                             WidthRequest="130">
 
                             <Button.Triggers>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                         Value="True">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#207755" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                    <Setter Property="BackgroundColor" Value="#207755" />
 
                                 </Trigger>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                         Value="False">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#25936B" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                    <Setter Property="BackgroundColor" Value="#25936B" />
 
                                 </Trigger>
                             </Button.Triggers>
@@ -161,13 +149,11 @@
                         FontSize="17"
                         Text="Subtotal:" />
                     <Label
-                        Margin="10,0,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,6,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="Price"
                         TextColor="#595353" />
-
-
                 </HorizontalStackLayout>
             </StackLayout>
         </Frame>
@@ -181,15 +167,15 @@
             Text="Reserved Room"
             TextColor="White" />
 
-        
+
         <Frame
+            Padding="0,0,0,0"
             AbsoluteLayout.LayoutBounds="0.5,0.94,.9,190"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
             BackgroundColor="White"
             BorderColor="Transparent"
             CornerRadius="20"
-            HasShadow="True"
-            Padding="0,0,0,0">
+            HasShadow="True">
 
             <StackLayout>
                 <HorizontalStackLayout>
@@ -200,8 +186,8 @@
                         Text="Room Type:" />
 
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="Room"
                         TextColor="#595353" />
@@ -213,8 +199,8 @@
                         FontSize="17"
                         Text="Time In:" />
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="00:00"
                         TextColor="#595353" />
@@ -225,16 +211,16 @@
                         FontSize="17"
                         Text="Time In:" />
                     <Label
-                        Margin="10,-10,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,-3,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="00:00"
                         TextColor="#595353" />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Frame
-                        Padding="0,0,0,0"
                         Margin="30,0,0,0"
+                        Padding="0,0,0,0"
                         CornerRadius="20"
                         HasShadow="True"
                         HeightRequest="90"
@@ -247,24 +233,18 @@
                             Padding="0,0,0,0"
                             BackgroundColor="#D33434"
                             CornerRadius="20"
-                            FontFamily="myfontsbold"
+                            FontFamily="myfontbold"
                             FontSize="12"
                             HeightRequest="30"
                             Text="Cancel Reservation"
                             WidthRequest="140">
                             <Button.Triggers>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                         Value="True">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#982121" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                    <Setter Property="BackgroundColor" Value="#982121" />
 
                                 </Trigger>
-                                <Trigger TargetType="Button"
-                                         Property="IsPressed"
-                                        Value="False">
-                                    <Setter Property="BackgroundColor"
-                                            Value="#D33434" />
+                                <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                    <Setter Property="BackgroundColor" Value="#D33434" />
 
                                 </Trigger>
                             </Button.Triggers>
@@ -280,8 +260,8 @@
                         FontSize="17"
                         Text="Subtotal:" />
                     <Label
-                        Margin="10,0,0,0"
-                        FontFamily="myfontbold"
+                        Margin="10,6,0,0"
+                        FontFamily="amyfontsbold"
                         FontSize="17"
                         Text="Price"
                         TextColor="#595353" />

@@ -67,7 +67,7 @@
                                         BorderColor="Transparent"
                                         CornerRadius="10">
                                         <HorizontalStackLayout>
-                                            <StackLayout>
+                                            <StackLayout Spacing="5">
                                                 <Frame
                                                     Padding="0"
                                                     BackgroundColor="Transparent"
@@ -75,12 +75,38 @@
                                                     HeightRequest="125">
                                                     <Image Source="testimage.png" />
                                                 </Frame>
+                                                <Frame Padding="0" CornerRadius="10">
+                                                    <HorizontalStackLayout>
+                                                        <Image
+                                                            Margin="15,0,0,0"
+                                                            HorizontalOptions="Start"
+                                                            Source="capacityicon.png" />
+                                                        <Label
+                                                            Margin="10,0,0,0"
+                                                            FontFamily="amyfontsbold"
+                                                            Text="0"
+                                                            TextColor="#25936B"
+                                                            VerticalOptions="Center" />
+                                                        <Label
+                                                            Margin="20,0,0,0"
+                                                            FontFamily="amyfontsbold"
+                                                            Text="Php"
+                                                            TextColor="#25936B"
+                                                            VerticalOptions="Center" />
+                                                        <Label
+                                                            Margin="5,0,0,0"
+                                                            FontFamily="amyfontsbold"
+                                                            Text="0000"
+                                                            TextColor="#25936B"
+                                                            VerticalOptions="Center" />
+                                                    </HorizontalStackLayout>
+                                                </Frame>
                                             </StackLayout>
                                             <StackLayout Margin="5,0,0,0">
                                                 <Frame
                                                     Padding="0"
                                                     CornerRadius="20"
-                                                    HeightRequest="135"
+                                                    HeightRequest="140"
                                                     WidthRequest="135">
                                                     <StackLayout>
                                                         <Label
@@ -90,8 +116,8 @@
                                                             Text="Branch:"
                                                             TextColor="#25936B" />
                                                         <Label
-                                                            Margin="25,-15,0,0"
-                                                            FontFamily="myfontbold"
+                                                            Margin="25,-9,0,0"
+                                                            FontFamily="amyfontsbold"
                                                             FontSize="12"
                                                             Text="{Binding Branch}"
                                                             TextColor="#25936B" />
@@ -102,8 +128,8 @@
                                                             Text="Room Type:"
                                                             TextColor="#25936B" />
                                                         <Label
-                                                            Margin="25,-15,0,0"
-                                                            FontFamily="myfontbold"
+                                                            Margin="25,-9,0,0"
+                                                            FontFamily="amyfontsbold"
                                                             FontSize="12"
                                                             Text="{Binding RoomType}"
                                                             TextColor="#25936B" />
@@ -114,13 +140,11 @@
                                                             Text="Room Name:"
                                                             TextColor="#25936B" />
                                                         <Label
-                                                            Margin="25,-15,0,0"
-                                                            FontFamily="myfontbold"
+                                                            Margin="25,-10,0,0"
+                                                            FontFamily="ayfontsbold"
                                                             FontSize="12"
                                                             Text="{Binding RoomName}"
                                                             TextColor="#25936B" />
-
-
                                                     </StackLayout>
                                                 </Frame>
                                                 <Button
@@ -160,20 +184,23 @@
 
         <!--  Time In and Time Out  -->
         <Frame
-            AbsoluteLayout.LayoutBounds="0.5,1,.9,200"
+            AbsoluteLayout.LayoutBounds="0.5,.95,.9,250"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
             BackgroundColor="Transparent"
             BorderColor="Transparent"
             CornerRadius="10">
             <VerticalStackLayout>
                 <HorizontalStackLayout>
-                    <VerticalStackLayout>
+                    <VerticalStackLayout Spacing="10">
+
                         <Label
                             Margin="15,0,0,0"
                             FontFamily="myfontbold"
                             FontSize="18"
                             Text="Time In:"
                             TextColor="White" />
+
+
                         <Frame
                             Padding="0,0,0,0"
                             CornerRadius="20"
@@ -182,12 +209,14 @@
                             WidthRequest="133">
                             <DatePicker
                                 x:Name="pkrDateIn"
-                                Margin="25,0,25,0"
+                                Margin="0,-10,0,-10"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
-                                FontFamily="myfontbold"
-                                FontSize="20"
-                                TextColor="#25936B" />
+                                FontFamily="amyfonts"
+                                FontSize="16"
+                                HorizontalOptions="Center"
+                                TextColor="#25936B"
+                                VerticalOptions="Center" />
 
                         </Frame>
 
@@ -199,16 +228,18 @@
                             WidthRequest="133">
                             <TimePicker
                                 x:Name="pkrTimeIn"
-                                Margin="25,0,25,0"
+                                Margin="0,-10,0,-10"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
-                                FontFamily="myfontbold"
-                                FontSize="20"
-                                TextColor="#25936B" />
+                                FontFamily="amyfonts"
+                                FontSize="17"
+                                HorizontalOptions="Center"
+                                TextColor="#25936B"
+                                VerticalOptions="Center" />
 
                         </Frame>
                     </VerticalStackLayout>
-                    <VerticalStackLayout Margin="45,0,0,0">
+                    <VerticalStackLayout Margin="45,0,0,0" Spacing="10">
                         <Label
                             Margin="15,0,0,0"
                             FontFamily="myfontbold"
@@ -223,12 +254,14 @@
                             WidthRequest="133">
                             <DatePicker
                                 x:Name="pkrDateOut"
-                                Margin="25,0,25,0"
+                                Margin="0,-10,0,-10"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
-                                FontFamily="myfontbold"
-                                FontSize="20"
-                                TextColor="#25936B" />
+                                FontFamily="amyfonts"
+                                FontSize="16"
+                                HorizontalOptions="Center"
+                                TextColor="#25936B"
+                                VerticalOptions="Center" />
 
                         </Frame>
 
@@ -240,16 +273,17 @@
                             WidthRequest="133">
                             <TimePicker
                                 x:Name="pkrTimeOut"
-                                Margin="25,0,25,0"
+                                Margin="0,-10,0,-10"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
-                                FontFamily="myfontbold"
-                                FontSize="20"
-                                TextColor="#25936B" />
+                                FontFamily="amyfonts"
+                                FontSize="17"
+                                HorizontalOptions="Center"
+                                TextColor="#25936B"
+                                VerticalOptions="Center" />
                         </Frame>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
-
 
 
                 <Button
@@ -277,14 +311,7 @@
                     </Button.Triggers>
                 </Button>
 
-
-
-
-
-
-
             </VerticalStackLayout>
-
         </Frame>
 
 

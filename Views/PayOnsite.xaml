@@ -80,6 +80,7 @@
                                                 <Label
                                                     x:Name="roomIDEntry"
                                                     Margin="10,27,0,0"
+                                                    FontFamily="amyfontsbold"
                                                     Text="Room ID here" />
                                             </Frame>
                                         </HorizontalStackLayout>
@@ -98,7 +99,7 @@
                                                 <Entry
                                                     x:Name="roomTypeEntry"
                                                     Margin="10,15,0,0"
-                                                    Text="18" />
+                                                    FontFamily="amyfontsbold" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -116,7 +117,7 @@
                                                 <Entry
                                                     x:Name="roomRateEntry"
                                                     Margin="10,15,0,0"
-                                                    Text="18" />
+                                                    FontFamily="amyfontsbold" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -134,7 +135,7 @@
                                                 <Entry
                                                     x:Name="txtEmail"
                                                     Margin="10,15,0,0"
-                                                    Text="18" />
+                                                    FontFamily="amyfontsbold" />
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -142,9 +143,11 @@
                                             Margin="30,15,0,0"
                                             HorizontalOptions="Center"
                                             Spacing="10">
+
                                             <Button
                                                 BackgroundColor="#25936B"
                                                 CornerRadius="18"
+                                                FontFamily="myfontbold"
                                                 Text="Continue"
                                                 WidthRequest="100">
 
@@ -163,6 +166,7 @@
                                             <Button
                                                 BackgroundColor="#878181"
                                                 CornerRadius="18"
+                                                FontFamily="myfontbold"
                                                 Text="Cancel"
                                                 WidthRequest="100">
 

@@ -24,24 +24,44 @@
                         Margin="0,10,5,0"
                         Padding="0"
                         BackgroundColor="#25936B"
-                       
                         CornerRadius="20"
                         FontFamily="myfontbold"
                         HeightRequest="50"
                         Text="Pay Online"
-                        WidthRequest="100" />
+                        WidthRequest="100">
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                <Setter Property="BackgroundColor" Value="#207755" />
 
-                    
+                            </Trigger>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                <Setter Property="BackgroundColor" Value="#25936B" />
+
+                            </Trigger>
+                        </Button.Triggers>
+                    </Button>
+
+
                     <Button
                         Margin="5,10,0,0"
                         Padding="0"
                         BackgroundColor="#25936B"
-                       
                         CornerRadius="20"
                         FontFamily="myfontbold"
                         HeightRequest="50"
                         Text="Pay Onsite"
-                        WidthRequest="100" />
+                        WidthRequest="100">
+                        <Button.Triggers>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                                <Setter Property="BackgroundColor" Value="#207755" />
+
+                            </Trigger>
+                            <Trigger TargetType="Button" Property="IsPressed" Value="False">
+                                <Setter Property="BackgroundColor" Value="#25936B" />
+
+                            </Trigger>
+                        </Button.Triggers>
+                    </Button>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
         </Frame>

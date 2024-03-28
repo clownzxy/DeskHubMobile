@@ -36,11 +36,14 @@
             BackgroundColor="Transparent"
             BorderColor="Transparent">
             <Button
+                Padding="0"
                 BackgroundColor="#25936B"
                 Clicked="OnClickedBtnLogin"
+                FontFamily="myfontbold"
                 FontSize="22"
                 Text="Login"
                 TextColor="#FFFFFF">
+
 
                 <Button.Triggers>
                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
@@ -64,9 +67,11 @@
             BackgroundColor="Transparent"
             BorderColor="Transparent">
             <Button
+                Padding="0"
                 BackgroundColor="#FFFFFF"
                 Clicked="OnClickedBtnSignUp"
                 FontAttributes="Bold"
+                FontFamily="myfontbold"
                 FontSize="22"
                 Text="Sign Up"
                 TextColor="#25936B">

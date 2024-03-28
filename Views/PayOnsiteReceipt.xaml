@@ -140,8 +140,8 @@
                                                 BackgroundColor="#25936B"
                                                 CornerRadius="18"
                                                 Text="Continue"
-                                                WidthRequest="150">
-
+                                                WidthRequest="150"
+                                                FontFamily="myfontbold">
                                                 <Button.Triggers>
                                                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
                                                         <Setter Property="BackgroundColor" Value="#207755" />

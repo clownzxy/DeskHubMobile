@@ -77,7 +77,9 @@
                 FontAttributes="Bold"
                 FontSize="22"
                 Text="Login"
-                TextColor="#FFFFFF">
+                TextColor="#FFFFFF"
+                FontFamily="myfontbold"
+                Padding="0">
 
                 <Button.Triggers>
                     <Trigger TargetType="Button" Property="IsPressed" Value="True">

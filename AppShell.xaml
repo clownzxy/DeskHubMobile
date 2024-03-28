@@ -12,8 +12,8 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPageTwo}"
-        Route="LoginPageTwo" />
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="ProfilePage" />
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
@@ -29,9 +29,8 @@
 
 
 
-        <!--Title="Home"
-        ContentTemplate="{DataTemplate local:LoginPageTwo}"
-        Route="LoginPageTwo" />
+
+    <!--
         Title="Home"
         ContentTemplate="{DataTemplate local:LoginPageTwo}"
         Route="LoginPageTwo" />
@@ -43,7 +42,11 @@
         Route="LoginPageTwo" />
         Title="Home"
         ContentTemplate="{DataTemplate local:LoginPageTwo}"
-        Route="LoginPageTwo" />-->
+        Route="LoginPageTwo" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
+    -->
 
 
 

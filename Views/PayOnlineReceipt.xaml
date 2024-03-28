@@ -82,7 +82,8 @@
                                                 <Label
                                                     x:Name="roomIDEntry"
                                                     Margin="10,27,0,0"
-                                                    Text="Room ID here" />
+                                                    Text="Room ID here" 
+                                                    FontFamily="amyfontsbold"/>
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -100,7 +101,8 @@
                                                 <Label
                                                     x:Name="roomTypeEntry"
                                                     Margin="10,28,0,0"
-                                                    Text="Details here" />
+                                                    Text="Details here" 
+                                                    FontFamily="amyfontsbold"/>
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -118,7 +120,8 @@
                                                 <Label
                                                     x:Name="roomRateEntry"
                                                     Margin="10,28,0,0"
-                                                    Text="Details here" />
+                                                    Text="Details here" 
+                                                    FontFamily="amyfontsbold"/>
 
                                             </Frame>
                                         </HorizontalStackLayout>
@@ -137,7 +140,8 @@
                                                 <Label
                                                     x:Name="txtPayCode"
                                                     Margin="10,28,0,0"
-                                                    Text="Details here" />
+                                                    Text="Details here" 
+                                                    FontFamily="amyfontsbold"/>
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -155,7 +159,8 @@
                                                 <Label
                                                     x:Name="txtCreditCard"
                                                     Margin="10,28,0,0"
-                                                    Text="Details here" />
+                                                    Text="Details here" 
+                                                    FontFamily="amyfontsbold"/>
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -174,7 +179,8 @@
                                                 <Label
                                                     x:Name="txtEmail"
                                                     Margin="10,28,0,0"
-                                                    Text="Details here" />
+                                                    Text="Details here" 
+                                                    FontFamily="amyfontsbold"/>
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -186,7 +192,8 @@
                                                 BackgroundColor="#25936B"
                                                 CornerRadius="18"
                                                 Text="Continue"
-                                                WidthRequest="150">
+                                                WidthRequest="150"
+                                                FontFamily="myfontbold">
 
                                                 <Button.Triggers>
                                                     <Trigger TargetType="Button" Property="IsPressed" Value="True">
