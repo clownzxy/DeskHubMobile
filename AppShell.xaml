@@ -29,7 +29,7 @@
 
 
 
-        Title="Home"
+        <!--Title="Home"
         ContentTemplate="{DataTemplate local:LoginPageTwo}"
         Route="LoginPageTwo" />
         Title="Home"
@@ -43,7 +43,7 @@
         Route="LoginPageTwo" />
         Title="Home"
         ContentTemplate="{DataTemplate local:LoginPageTwo}"
-        Route="LoginPageTwo" />
+        Route="LoginPageTwo" />-->
 
 
 

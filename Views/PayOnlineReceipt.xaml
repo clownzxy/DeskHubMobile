@@ -79,7 +79,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Label Margin="10,27,0,0" Text="Room ID here" />
+                                                <Label
+                                                    x:Name="roomIDEntry"
+                                                    Margin="10,27,0,0"
+                                                    Text="Room ID here" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -94,7 +97,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Label Margin="10,28,0,0" Text="Details here" />
+                                                <Label
+                                                    x:Name="roomTypeEntry"
+                                                    Margin="10,28,0,0"
+                                                    Text="Details here" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -109,8 +115,11 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Label Margin="10,28,0,0" Text="Details here" />
-                                               
+                                                <Label
+                                                    x:Name="roomRateEntry"
+                                                    Margin="10,28,0,0"
+                                                    Text="Details here" />
+
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -125,7 +134,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Label Margin="10,28,0,0" Text="Details here" />
+                                                <Label
+                                                    x:Name="txtPayCode"
+                                                    Margin="10,28,0,0"
+                                                    Text="Details here" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -140,7 +152,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="169">
-                                                <Label Margin="10,28,0,0" Text="Details here" />
+                                                <Label
+                                                    x:Name="txtCreditCard"
+                                                    Margin="10,28,0,0"
+                                                    Text="Details here" />
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -156,7 +171,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="168">
-                                                <Label Margin="10,28,0,0" Text="Details here" />
+                                                <Label
+                                                    x:Name="txtEmail"
+                                                    Margin="10,28,0,0"
+                                                    Text="Details here" />
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -182,7 +200,7 @@
                                                 </Button.Triggers>
 
                                             </Button>
-                                           
+
                                         </HorizontalStackLayout>
 
                                     </StackLayout>
