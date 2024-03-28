@@ -8,6 +8,7 @@ namespace DeskHubMobile.Views;
 public partial class HomePage : ContentPage
 {
     RoomViewModel roomViewModel = new RoomViewModel();
+    User userRecord= new User();
 
     public HomePage()
     {
@@ -18,6 +19,7 @@ public partial class HomePage : ContentPage
     public HomePage(User user)
     {
         InitializeComponent();
+        userRecord = user;
         BindingContext = user;
     }
 
@@ -35,10 +37,12 @@ public partial class HomePage : ContentPage
     private async void DisplayAvailableRooms()
     {
         UpdateViewModel();
+        DateTime dateIn = pkrDateIn.Date;
+        DateTime dateOut = pkrDateOut.Date;
         TimeSpan timeIn = pkrTimeIn.Time;
         TimeSpan timeOut = pkrTimeOut.Time;
 
-        if (timeIn > timeOut)
+        if (timeIn > timeOut && dateIn > dateOut)
         {
             await DisplayAlert("Invalid Selection", "Time In cannot be later than Time Out.", "OK");
         }
@@ -64,16 +68,21 @@ public partial class HomePage : ContentPage
         }
     }
 
-    //private void ReserveBtnClicked(object sender, EventArgs e)
-    //{
-    //    var button = (Button)sender;
-    //    var selectedRoom = (Room)button.BindingContext;
+    DateTime AddTimeToDate(DateTime date, TimeSpan time)
+    {
+        return date.Add(time);
+    }
 
-    //    string paycode = GeneratePayCode();
-    //    Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode);
+    private void ReserveBtnClicked(object sender, EventArgs e)
+    {
+        var button = (Button)sender;
+        var selectedRoom = (Room)button.BindingContext;
 
-    //    //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
-    //}
+        string paycode = GeneratePayCode();
+        Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode, AddTimeToDate(pkrDateIn.Date, pkrTimeIn.Time), AddTimeToDate(pkrDateOut.Date, pkrTimeOut.Time));
+
+        //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
+    }
 
     private void RentBtnClicked(object sender, EventArgs e)
     {
@@ -83,7 +92,7 @@ public partial class HomePage : ContentPage
         string paycode = GeneratePayCode();
         //Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode);
 
-        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode));
+        this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode, AddTimeToDate(pkrDateIn.Date, pkrTimeIn.Time), AddTimeToDate(pkrDateOut.Date, pkrTimeOut.Time)));
     }
 
     public string GeneratePayCode()
@@ -117,6 +126,13 @@ public partial class HomePage : ContentPage
             // Handle book now action
             await DisplayAlert("Booking", "Your booking has been confirmed.", "OK");
         }
+    }
+
+    private async void ProfileImageBtnOnCLicked(object sender, EventArgs e)
+    {
+         //await Navigation.PushAsync(new ProfilePage(userRecord));
+        Application.Current.MainPage = new ProfilePage(userRecord);
+
     }
 
 

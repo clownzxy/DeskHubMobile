@@ -17,6 +17,7 @@
         <ImageButton
             AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
             AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="ProfileImageBtnOnCLicked"
             Source="profileicon.png" />
 
         <!--  Search Bar  -->
@@ -126,13 +127,13 @@
                                                     Margin="0,5,0,0"
                                                     Padding="0,-8,0,0"
                                                     BackgroundColor="#25936B"
+                                                    Clicked="RentBtnClicked"
                                                     CornerRadius="20"
                                                     FontFamily="myfontbold"
                                                     FontSize="20"
                                                     HeightRequest="30"
                                                     Text="Book"
-                                                    WidthRequest="100"
-                                                    Clicked="RentBtnClicked">
+                                                    WidthRequest="100">
 
                                                     <Button.Triggers>
                                                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
@@ -177,7 +178,24 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
+                            WidthRequest="133">
+                            <DatePicker
+                                x:Name="pkrDateIn"
+                                Margin="25,0,25,0"
+                                BackgroundColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="myfontbold"
+                                FontSize="20"
+                                TextColor="#25936B" />
+
+                        </Frame>
+
+                        <Frame
+                            Padding="0,0,0,0"
+                            CornerRadius="20"
+                            HasShadow="True"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <TimePicker
                                 x:Name="pkrTimeIn"
@@ -186,8 +204,7 @@
                                 FontAttributes="Bold"
                                 FontFamily="myfontbold"
                                 FontSize="20"
-                                TextColor="#25936B"
-                                Time="1:00:26" />
+                                TextColor="#25936B" />
 
                         </Frame>
                     </VerticalStackLayout>
@@ -202,7 +219,24 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
+                            WidthRequest="133">
+                            <DatePicker
+                                x:Name="pkrDateOut"
+                                Margin="25,0,25,0"
+                                BackgroundColor="White"
+                                FontAttributes="Bold"
+                                FontFamily="myfontbold"
+                                FontSize="20"
+                                TextColor="#25936B" />
+
+                        </Frame>
+
+                        <Frame
+                            Padding="0,0,0,0"
+                            CornerRadius="20"
+                            HasShadow="True"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <TimePicker
                                 x:Name="pkrTimeOut"
@@ -211,9 +245,7 @@
                                 FontAttributes="Bold"
                                 FontFamily="myfontbold"
                                 FontSize="20"
-                                TextColor="#25936B"
-                                Time="1:00:26" />
-
+                                TextColor="#25936B" />
                         </Frame>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>
@@ -229,10 +261,10 @@
                     CornerRadius="20"
                     FontAttributes="Bold"
                     FontFamily="myfontbold"
-                    Text="Check Room Availability"
                     FontSize="15"
+                    Text="Check Room Availability"
                     WidthRequest="250">
-                    
+
                     <Button.Triggers>
                         <Trigger TargetType="Button" Property="IsPressed" Value="True">
                             <Setter Property="BackgroundColor" Value="#207755" />
@@ -255,9 +287,9 @@
 
         </Frame>
 
-        
+
 
     </AbsoluteLayout>
-    
-    
+
+
 </ContentPage>

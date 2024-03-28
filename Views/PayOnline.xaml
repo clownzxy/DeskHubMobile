@@ -21,7 +21,7 @@
             Source="profileicon.png" />
 
 
-        
+
 
         <Frame
             Padding="0"
@@ -78,7 +78,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Label Margin="10,27,0,0" Text="Room ID here" />
+                                                <Label
+                                                    x:Name="roomIDEntry"
+                                                    Margin="10,27,0,0"
+                                                    Text="Room ID here" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -93,7 +96,10 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Entry Margin="10,15,0,0" Text="18" />
+                                                <Entry
+                                                    x:Name="roomTypeEntry"
+                                                    Margin="10,15,0,0"
+                                                    Text="18" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -108,7 +114,7 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Entry Margin="10,15,0,0"  />
+                                                <Entry x:Name="roomRateEntry" Margin="10,15,0,0" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -123,7 +129,7 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="170">
-                                                <Entry Margin="10,15,0,0"  />
+                                                <Entry x:Name="txtPayCode" Margin="10,15,0,0" />
                                             </Frame>
                                         </HorizontalStackLayout>
                                         <HorizontalStackLayout>
@@ -138,7 +144,7 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="169">
-                                                <Entry Margin="10,15,0,0"  />
+                                                <Entry x:Name="txtCreditCard" Margin="10,15,0,0" />
                                             </Frame>
                                         </HorizontalStackLayout>
 
@@ -154,7 +160,7 @@
                                                 CornerRadius="10"
                                                 HeightRequest="35"
                                                 WidthRequest="168">
-                                                <Entry Margin="10,15,0,0"  />
+                                                <Entry x:Name="txtEmail" Margin="10,15,0,0" />
                                             </Frame>
                                         </HorizontalStackLayout>
 

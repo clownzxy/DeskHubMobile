@@ -12,13 +12,13 @@ public partial class PayOnsiteReceipt : ContentPage
     {
         InitializeComponent();
     }
-
-    public PayOnsiteReceipt(string roomID, string roomType, double roomRate, string paycode, string email) : this()
+    //, string paycode
+    public PayOnsiteReceipt(string roomID, string roomType, double roomRate, string email) : this()
     {
         roomIDEntry.Text = roomID;
         roomTypeEntry.Text = roomType;
         roomRateEntry.Text = roomRate.ToString();
-        txtPayCode.Text = paycode;
+        //txtPayCode.Text = paycode;
         txtEmail.Text = email;
     }
 
@@ -55,11 +55,12 @@ public partial class PayOnsiteReceipt : ContentPage
             string roomID = roomIDEntry.Text;
             string roomType = roomTypeEntry.Text;
             string roomRate = roomRateEntry.Text;
-            string payCode = txtPayCode.Text;
+            //string payCode = txtPayCode.Text;
             string email = txtEmail.Text;
-            string paymentDetails = $"Room ID: {roomID}\nRoom Type: {roomType}\nRoom Rate: {roomRate}\nPayment Code: {payCode}";
-
-            if (string.IsNullOrWhiteSpace(roomID) || string.IsNullOrWhiteSpace(roomType) || string.IsNullOrWhiteSpace(roomRate) || string.IsNullOrWhiteSpace(payCode) || string.IsNullOrWhiteSpace(email))
+            string paymentDetails = $"Room ID: {roomID}\nRoom Type: {roomType}\nRoom Rate: {roomRate}";
+            //\nPayment Code: {payCode}
+            //|| string.IsNullOrWhiteSpace(payCode)
+            if (string.IsNullOrWhiteSpace(roomID) || string.IsNullOrWhiteSpace(roomType) || string.IsNullOrWhiteSpace(roomRate)  || string.IsNullOrWhiteSpace(email))
             {
                 await DisplayAlert("Empty Payment Details", "Please enter the payment details properly.", "OK");
             }

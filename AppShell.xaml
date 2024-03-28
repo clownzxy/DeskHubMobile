@@ -10,11 +10,10 @@
     Shell.TabBarForegroundColor="#25936B"
     Shell.TabBarTitleColor="#25936B">
 
-
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:PayOnsiteReceipt}"
-        Route="PayOnsiteReceipt" />
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
 
     <TabBar x:Name="Tabs">
         <Tab Icon="infoicon.png">
@@ -30,6 +29,21 @@
 
 
 
+        <!--Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:LoginPageTwo}"
+        Route="LoginPageTwo" />-->
 
 
 

@@ -13,18 +13,22 @@ public partial class BookingTypePopUp : Popup
     String roomTypeglobal;
     double roomRateglobal;
     String paycodeglobal;
+    DateTime dateInglobal;
+    DateTime dateOutglobal;
 
 	public BookingTypePopUp()
 	{
 		InitializeComponent();
     }
 
-    public BookingTypePopUp(string roomID, string roomType, double roomRate, string paycode) : this()
+    public BookingTypePopUp(string roomID, string roomType, double roomRate, string paycode, DateTime dateIn, DateTime dateOut) : this()
     {
         roomIdglobal = roomID;
         roomTypeglobal = roomType;
         roomRateglobal = roomRate;
         paycodeglobal = paycode;
+        dateInglobal = dateIn;
+        dateOutglobal = dateOut;
     }
 
     public void UpdateViewModel()
@@ -33,31 +37,34 @@ public partial class BookingTypePopUp : Popup
         BindingContext = roomViewModel;
     }
 
-    
+    DateTime AddTimeToDate(DateTime date, TimeSpan time)
+    {
+        return date.Add(time);
+    }
 
-    //private async void PayOnlineBtnClicked(object sender, EventArgs e)
-    //{
-    //    //var button = (Button)sender;
-    //    //var selectedRoom = (Room)button.BindingContext;
+    private async void PayOnlineBtnClicked(object sender, EventArgs e)
+    {
+        //var button = (Button)sender;
+        //var selectedRoom = (Room)button.BindingContext;
 
-    //    string paycode = GeneratePayCode();
-    //    await CloseAsync();
-    //    //await Navigation.PushAsync(new SignUpPage());
+        string paycode = GeneratePayCode();
+        await CloseAsync();
+        //await Navigation.PushAsync(new SignUpPage());
 
-    //    Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
-    //}
-
-
-
-
-    //private async void PayOnsiteBtnClicked(object sender, EventArgs e)
-    //{
+        Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal, dateInglobal, dateOutglobal);
+    }
 
 
-    //    string paycode = GeneratePayCode();
-    //    await CloseAsync();
-    //    Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
-    //}
+
+
+    private async void PayOnsiteBtnClicked(object sender, EventArgs e)
+    {
+
+
+        string paycode = GeneratePayCode();
+        await CloseAsync();
+        Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
+    }
 
     public string GeneratePayCode()
     {
