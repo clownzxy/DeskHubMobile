@@ -17,6 +17,7 @@
         <ImageButton
             AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
             AbsoluteLayout.LayoutFlags="PositionProportional"
+            Clicked="ProfileImageBtnOnCLicked"
             Source="profileicon.png" />
 
         <!--  Search Bar  -->
@@ -177,10 +178,10 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <DatePicker
-                                x:Name="pkrTimeIn"
+                                x:Name="pkrDateIn"
                                 Margin="25,0,25,0"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
@@ -194,10 +195,10 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <TimePicker
-                                x:Name="pkrDate"
+                                x:Name="pkrTimeIn"
                                 Margin="25,0,25,0"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
@@ -218,10 +219,10 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <DatePicker
-                                x:Name="pkrTimeOut"
+                                x:Name="pkrDateOut"
                                 Margin="25,0,25,0"
                                 BackgroundColor="White"
                                 FontAttributes="Bold"
@@ -235,7 +236,7 @@
                             Padding="0,0,0,0"
                             CornerRadius="20"
                             HasShadow="True"
-                            HeightRequest="55"
+                            HeightRequest="40"
                             WidthRequest="133">
                             <TimePicker
                                 x:Name="pkrTimeOut"
@@ -244,9 +245,7 @@
                                 FontAttributes="Bold"
                                 FontFamily="myfontbold"
                                 FontSize="20"
-                                TextColor="#25936B"
-                                Time="1:00:26" />
-
+                                TextColor="#25936B" />
                         </Frame>
                     </VerticalStackLayout>
                 </HorizontalStackLayout>

@@ -13,10 +13,7 @@
             Aspect="AspectFill"
             Source="backgroundimagetwo.png" />
 
-        <ImageButton
-            AbsoluteLayout.LayoutBounds="0.97,0.02,30,30"
-            AbsoluteLayout.LayoutFlags="PositionProportional"
-            Source="profileicon.png" />
+
 
 
         <!--  Logo Button  -->
@@ -24,6 +21,7 @@
             AbsoluteLayout.LayoutBounds="0.5,0.01,100,130"
             AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional"
             Aspect="AspectFit"
+            Clicked="ImageButtonLogoOnClicked"
             Source="logo.png" />
 
 
@@ -42,20 +40,23 @@
                 <Image Margin="10,0,0,0" Source="maleprofileicon.png" />
                 <VerticalStackLayout>
                     <Button
+                        x:Name="ProfileNameBtnText"
                         Margin="0,8,0,0"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
+                        Clicked="ProfileBtnOnClicked"
                         FontFamily="myfont"
                         FontSize="20"
-                        Text="name name name"
                         TextColor="Black" />
+
+                    <!--  Text="{Binding Name}"  -->
                     <Button
+                        x:Name="ProfileEmailBtnText"
                         Margin="-40,-35,0,0"
                         BackgroundColor="Transparent"
                         BorderColor="Transparent"
                         FontFamily="myfont"
                         FontSize="15"
-                        Text="email email email"
                         TextColor="#878181" />
                 </VerticalStackLayout>
             </HorizontalStackLayout>
@@ -76,14 +77,14 @@
                     Margin="70,0,0,0"
                     Scale="0.55"
                     Source="historyicon.png" />
-                <Button 
+                <Button
                     Margin="-15,-6,0,0"
                     BackgroundColor="Transparent"
                     BorderColor="Transparent"
                     FontFamily="myfontbold"
                     FontSize="16"
                     Text="Transaction History"
-                    TextColor="Black"/>
+                    TextColor="Black" />
             </HorizontalStackLayout>
 
 

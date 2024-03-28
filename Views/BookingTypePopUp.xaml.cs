@@ -13,18 +13,22 @@ public partial class BookingTypePopUp : Popup
     String roomTypeglobal;
     double roomRateglobal;
     String paycodeglobal;
+    DateTime dateInglobal;
+    DateTime dateOutglobal;
 
 	public BookingTypePopUp()
 	{
 		InitializeComponent();
     }
 
-    public BookingTypePopUp(string roomID, string roomType, double roomRate, string paycode) : this()
+    public BookingTypePopUp(string roomID, string roomType, double roomRate, string paycode, DateTime dateIn, DateTime dateOut) : this()
     {
         roomIdglobal = roomID;
         roomTypeglobal = roomType;
         roomRateglobal = roomRate;
         paycodeglobal = paycode;
+        dateInglobal = dateIn;
+        dateOutglobal = dateOut;
     }
 
     public void UpdateViewModel()
@@ -33,7 +37,10 @@ public partial class BookingTypePopUp : Popup
         BindingContext = roomViewModel;
     }
 
-    
+    DateTime AddTimeToDate(DateTime date, TimeSpan time)
+    {
+        return date.Add(time);
+    }
 
     private async void PayOnlineBtnClicked(object sender, EventArgs e)
     {
@@ -44,7 +51,7 @@ public partial class BookingTypePopUp : Popup
         await CloseAsync();
         //await Navigation.PushAsync(new SignUpPage());
 
-        Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
+        Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal, dateInglobal, dateOutglobal);
     }
 
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup
+    x:Class="DeskHubMobile.Views.ProfileInfoPopUp"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    CanBeDismissedByTappingOutsideOfPopup="True">
+
+    <VerticalStackLayout>
+        <Label x:Name="NameLabelTxt" />
+        <Label x:Name="EmailLabelTxt" />
+        <Label x:Name="PhoneLabelTxt" />
+        <Label x:Name="AddressLabelTxt" />
+        <Label x:Name="GenderLabelTxt" />
+        <Label x:Name="BirthdayLabelTxt" />
+
+
+    </VerticalStackLayout>
+</toolkit:Popup>
