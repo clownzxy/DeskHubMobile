@@ -74,16 +74,16 @@ public partial class HomePage : ContentPage
         return date.Add(time);
     }
 
-    private void ReserveBtnClicked(object sender, EventArgs e)
-    {
-        var button = (Button)sender;
-        var selectedRoom = (Room)button.BindingContext;
+    //private void ReserveBtnClicked(object sender, EventArgs e)
+    //{
+    //    var button = (Button)sender;
+    //    var selectedRoom = (Room)button.BindingContext;
 
         string paycode = GeneratePayCode();
         Application.Current.MainPage = new PayOnline(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate, paycode, AddTimeToDate(pkrDateIn.Date, pkrTimeIn.Time), AddTimeToDate(pkrDateOut.Date, pkrTimeOut.Time));
 
-        //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
-    }
+    //    //this.ShowPopup(new BookingTypePopUp(selectedRoom.RoomID, selectedRoom.RoomType, selectedRoom.Rate,paycode));
+    //}
 
     private void RentBtnClicked(object sender, EventArgs e)
     {

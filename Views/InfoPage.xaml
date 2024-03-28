@@ -7,10 +7,6 @@
 
     <AbsoluteLayout>
 
-
-
-
-
         <!--  BackgroundImage  -->
         <Image
             AbsoluteLayout.LayoutBounds="0,0,1,1"

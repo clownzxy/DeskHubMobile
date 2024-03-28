@@ -42,14 +42,14 @@ public partial class BookingTypePopUp : Popup
         return date.Add(time);
     }
 
-    private async void PayOnlineBtnClicked(object sender, EventArgs e)
-    {
-        //var button = (Button)sender;
-        //var selectedRoom = (Room)button.BindingContext;
+    //private async void PayOnlineBtnClicked(object sender, EventArgs e)
+    //{
+    //    //var button = (Button)sender;
+    //    //var selectedRoom = (Room)button.BindingContext;
 
-        string paycode = GeneratePayCode();
-        await CloseAsync();
-        //await Navigation.PushAsync(new SignUpPage());
+    //    string paycode = GeneratePayCode();
+    //    await CloseAsync();
+    //    //await Navigation.PushAsync(new SignUpPage());
 
         Application.Current.MainPage = new PayOnline(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal, dateInglobal, dateOutglobal);
     }
@@ -57,14 +57,14 @@ public partial class BookingTypePopUp : Popup
 
 
 
-    private async void PayOnsiteBtnClicked(object sender, EventArgs e)
-    {
+    //private async void PayOnsiteBtnClicked(object sender, EventArgs e)
+    //{
 
 
-        string paycode = GeneratePayCode();
-        await CloseAsync();
-        Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
-    }
+    //    string paycode = GeneratePayCode();
+    //    await CloseAsync();
+    //    Application.Current.MainPage = new PayOnsite(roomIdglobal, roomTypeglobal, roomRateglobal, paycodeglobal);
+    //}
 
     public string GeneratePayCode()
     {
