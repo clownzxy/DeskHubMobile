@@ -47,7 +47,7 @@
                         FontSize="18"
                         Placeholder="First Name"
                         PlaceholderColor="#49A686"
-                        TextColor="#25936B" />
+                        TextColor="#25936B"/>
                     <Entry
                         x:Name="txtMiddleName"
                         Margin="10"
@@ -103,6 +103,7 @@
                             Scale="1.2"
                             Source="femaleicon.png" />
                     </StackLayout>
+                    
                     <Entry
                         x:Name="txtAddress"
                         Margin="10"
@@ -112,6 +113,7 @@
                         Placeholder="Address"
                         PlaceholderColor="#49A686"
                         TextColor="#25936B" />
+                    
                     <Label
                         Margin="10"
                         BackgroundColor="Transparent"
@@ -119,6 +121,7 @@
                         FontSize="18"
                         Text="Birthday"
                         TextColor="#25936B" />
+                    
                     <DatePicker
                         x:Name="pkrBirthday"
                         Margin="9,0,0,0"
@@ -128,6 +131,7 @@
                         MaximumDate="12/31/2024"
                         MinimumDate="02/01/1955"
                         TextColor="Black" />
+                    
                     <Entry
                         x:Name="txtusernameEntry"
                         Margin="10"

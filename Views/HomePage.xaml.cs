@@ -10,7 +10,6 @@ public partial class HomePage : ContentPage
     RoomViewModel roomViewModel = new RoomViewModel();
     User userRecord= new User();
 
-
     public HomePage()
     {
         InitializeComponent();
