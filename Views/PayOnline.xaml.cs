@@ -20,7 +20,7 @@ public partial class PayOnline : ContentPage
         roomRateEntry.Text = roomRate.ToString();
         txtPayCode.Text = paycode;
     }
-
+    //
     private void OnCreditCardEntryTextChanged(object sender, TextChangedEventArgs e)
     {
         if (!string.IsNullOrWhiteSpace(e.NewTextValue))
